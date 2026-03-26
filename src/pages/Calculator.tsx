@@ -68,7 +68,7 @@ export default function Calculator() {
       <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
             alt="Calculator Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -211,19 +211,19 @@ export default function Calculator() {
                       </label>
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       <button
                         type="submit"
-                        className="flex-grow bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-brand-purple transition-all"
+                        className="flex-grow btn-premium bg-brand-blue text-white !px-10 !py-5"
                       >
                         Calculate Requirement
                       </button>
                       <button
                         type="button"
                         onClick={resetForm}
-                        className="p-4 bg-gray-100 text-gray-500 rounded-xl hover:bg-gray-200 transition-all"
+                        className="p-5 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200 transition-all flex items-center justify-center"
                       >
-                        <RefreshCw className="w-6 h-6" />
+                        <RefreshCw className="w-8 h-8" />
                       </button>
                     </div>
                   </form>
@@ -250,7 +250,7 @@ export default function Calculator() {
                       <p className="text-sm text-gray-400 italic">
                         *Actual paint requirement may vary based on surface condition, texture, absorption, and product type.
                       </p>
-                      <button className="w-full bg-white text-brand-dark py-4 rounded-xl font-bold hover:bg-brand-accent hover:text-white transition-all">
+                      <button className="btn-premium bg-white text-brand-dark w-full !px-10 !py-5">
                         Get Exact Quote
                       </button>
                     </div>

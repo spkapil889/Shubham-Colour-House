@@ -5,31 +5,31 @@ import { ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 const brands = [
   {
     name: 'Asian Paints',
-    logo: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/asian-paints-logo.png',
+    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp',
     description: 'India\'s leading paint company offering a wide range of interior, exterior, and decorative paints.',
     highlights: ['Royale Luxury Emulsion', 'Apex Ultima Exterior', 'SmartCare Waterproofing']
   },
   {
     name: 'Berger Paints',
-    logo: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/berger-logo.png',
+    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp',
     description: 'Known for innovation and high-quality coatings for homes and industrial applications.',
     highlights: ['Silk Glamor', 'Weathercoat Long Life', 'Home Shield Solutions']
   },
   {
     name: 'Nerolac',
-    logo: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/nerolac-logo.png',
+    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp',
     description: 'A pioneer in industrial and decorative paints with a focus on eco-friendly products.',
     highlights: ['Impressions Eco Clean', 'Excel Everlast', 'Suraksha Plus']
   },
   {
     name: 'Nippon Paint',
-    logo: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/nippon-logo.png',
+    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp',
     description: 'Global leader in paint technology providing advanced coating solutions.',
     highlights: ['Momento Special Effects', 'Weatherbond Advance', 'Odour-less AirCare']
   },
   {
     name: 'JSW Paints',
-    logo: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/jsw-logo.png',
+    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/spacious-living-room-in-modern-apartment-2025-02-10-09-52-33-utc-1-scaled-1.webp',
     description: 'Modern paint solutions with a focus on simplicity and high performance.',
     highlights: ['Halo Interior', 'Aurum Exterior', 'Pixa Range']
   }
@@ -42,7 +42,7 @@ export default function Brands() {
       <section className="bg-brand-purple text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
             alt="Brands Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -141,7 +141,7 @@ export default function Brands() {
                 <p className="text-gray-300 mb-8 leading-relaxed">
                   Different brands excel in different categories. Our experts can help you compare and choose the brand that best fits your budget and requirements.
                 </p>
-                <button className="w-full bg-brand-accent text-white py-4 rounded-xl font-bold hover:bg-brand-purple transition-all">
+                <button className="btn-premium bg-brand-accent text-white w-full !px-10 !py-5">
                   Talk to Our Brand Expert
                 </button>
               </div>

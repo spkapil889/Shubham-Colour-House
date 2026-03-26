@@ -11,7 +11,7 @@ const blogPosts = [
     category: 'Interior Paint Tips',
     date: 'Mar 15, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const blogPosts = [
     category: 'Exterior Paint Care',
     date: 'Mar 10, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const blogPosts = [
     category: 'Waterproofing',
     date: 'Mar 05, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/spacious-living-room-in-modern-apartment-2025-02-10-09-52-33-utc-1-scaled-1.webp'
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const blogPosts = [
     category: 'Product Guides',
     date: 'Feb 28, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/warm-and-cozy-composition-of-living-room-interior-2024-10-17-17-58-03-utc-1-2048x1365-1.webp'
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const blogPosts = [
     category: 'Product Guides',
     date: 'Feb 20, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp'
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const blogPosts = [
     category: 'Color Ideas',
     date: 'Feb 15, 2026',
     author: 'Shubham Expert',
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp'
   }
 ];
 
@@ -69,7 +69,7 @@ export default function Blogs() {
       <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp"
             alt="Blogs Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -223,7 +223,7 @@ export default function Blogs() {
                 placeholder="Your Email Address"
                 className="flex-grow bg-white/10 border border-white/20 rounded-full px-8 py-4 focus:outline-none focus:border-brand-blue transition-colors"
               />
-              <button className="bg-brand-blue hover:bg-brand-purple text-white px-10 py-4 rounded-full font-bold transition-all">
+              <button className="btn-premium bg-brand-blue text-white !px-12 !py-5">
                 Subscribe
               </button>
             </form>

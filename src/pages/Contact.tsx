@@ -9,7 +9,7 @@ export default function Contact() {
       <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
             alt="Contact Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -145,8 +145,8 @@ export default function Contact() {
                     <label className="text-sm font-bold text-gray-500">Your Message</label>
                     <textarea rows={5} placeholder="How can we help you?" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-6 py-4 focus:outline-none focus:border-brand-blue"></textarea>
                   </div>
-                  <button className="w-full bg-brand-blue text-white py-5 rounded-xl font-bold text-lg hover:bg-brand-purple transition-all flex items-center justify-center gap-3">
-                    Send Message <Send className="w-5 h-5" />
+                  <button className="btn-premium bg-brand-blue text-white w-full !px-12 !py-6 text-xl md:text-2xl">
+                    Send Message <Send className="w-6 h-6" />
                   </button>
                 </form>
               </div>
@@ -166,7 +166,7 @@ export default function Contact() {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-brand-purple transition-all"
+              className="btn-premium bg-brand-blue text-white !px-10 !py-4 text-lg"
             >
               Open in Maps
             </a>

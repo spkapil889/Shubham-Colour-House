@@ -8,17 +8,20 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         {/* Main White Card */}
         <div className="bg-white rounded-[3rem] p-10 md:p-16 mb-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Logo Column */}
-            <div className="lg:col-span-4">
-              <Link to="/" className="flex items-center gap-4">
+            <div className="lg:col-span-3">
+              <Link to="/" className="flex items-center gap-4 mb-6">
                 <img
-                  src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/Group-34-2048x1492.png"
-                  alt="Shubham Colour House"
-                  className="h-24 md:h-32 w-auto object-contain"
+                  src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/Group-34-2048x1492-1.webp"
+                  alt="Logo"
+                  className="h-20 md:h-24 w-auto object-contain"
                   referrerPolicy="no-referrer"
                 />
               </Link>
+              <p className="text-gray-600 text-sm font-medium leading-relaxed">
+                Alwar's premier destination for premium paints and home transformation solutions since 1995.
+              </p>
             </div>
 
             {/* Services Column */}
@@ -43,7 +46,7 @@ export default function Footer() {
             </div>
 
             {/* Navigation Column */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <h4 className="text-2xl font-black mb-8 text-brand-dark">Navigation</h4>
               <ul className="space-y-4">
                 {[
@@ -94,21 +97,24 @@ export default function Footer() {
           <p className="text-white text-sm font-bold">
             Copyright © 2025, All rights reserved.
           </p>
-          <div className="flex gap-4">
-            {[
-              { icon: Facebook, href: '#' },
-              { icon: Instagram, href: '#' },
-              { icon: Twitter, href: '#' },
-              { icon: Youtube, href: '#' }
-            ].map((social, idx) => (
-              <a
-                key={idx}
-                href={social.href}
-                className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-brand-accent transition-all text-white"
-              >
-                <social.icon className="w-4 h-4" />
-              </a>
-            ))}
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <span className="text-white text-sm font-bold uppercase tracking-widest opacity-80">Follow Us</span>
+            <div className="flex gap-4">
+              {[
+                { icon: Facebook, href: '#' },
+                { icon: Instagram, href: '#' },
+                { icon: Twitter, href: '#' },
+                { icon: Youtube, href: '#' }
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-brand-accent transition-all text-white"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const productCategories = [
     description: 'Create the perfect ambiance with our range of interior finishes, from matte to high-gloss.',
     features: ['Washable & Durable', 'Stain Resistant', 'Low VOC / Eco-friendly', 'Rich Colour Depth'],
     brands: ['Asian Paints Royale', 'Berger Silk', 'Nerolac Impressions'],
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/10/5.png'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp'
   },
   {
     id: 'exterior',
@@ -17,7 +17,7 @@ const productCategories = [
     description: 'Protect your home from harsh weather, dust, and algae with advanced exterior coatings.',
     features: ['Weather Guard Technology', 'Anti-Algal & Anti-Dust', 'Crack Bridging', 'Heat Reflective'],
     brands: ['Asian Paints Apex Ultima', 'Berger Weathercoat', 'Nippon Weatherbond'],
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/10/6.png'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp'
   },
   {
     id: 'waterproofing',
@@ -25,7 +25,7 @@ const productCategories = [
     description: 'Comprehensive leak-proof solutions for roofs, bathrooms, and external walls.',
     features: ['High Elasticity', 'Negative Pressure Resistance', 'Damp-proof Technology', 'Long-lasting Warranty'],
     brands: ['Dr. Fixit', 'Asian Paints SmartCare', 'Berger Home Shield'],
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/10/7.png'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp'
   },
   {
     id: 'wood-metal',
@@ -33,7 +33,7 @@ const productCategories = [
     description: 'Premium enamels and PU coatings to protect and beautify your furniture and metal fixtures.',
     features: ['High Gloss & Smooth Finish', 'Rust Protection', 'Scratch Resistant', 'Quick Drying'],
     brands: ['Asian Paints PU', 'Berger Luxol', 'Nerolac Enamel'],
-    image: 'https://shubhamcolourhouse.com/wp-content/uploads/2025/10/8.png'
+    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp'
   }
 ];
 
@@ -44,7 +44,7 @@ export default function Products() {
       <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
             alt="Products Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -107,10 +107,10 @@ export default function Products() {
                     ))}
                   </div>
                   <div className="pt-6 flex flex-wrap gap-4">
-                    <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-brand-purple transition-all flex items-center gap-2">
-                      Get a Quote <ArrowRight className="w-4 h-4" />
+                    <button className="btn-premium bg-brand-blue text-white !px-10 !py-4 flex items-center gap-2">
+                      Get a Quote <ArrowRight className="w-5 h-5" />
                     </button>
-                    <button className="bg-white border-2 border-gray-200 text-brand-dark px-8 py-3 rounded-full font-bold hover:border-brand-blue hover:text-brand-blue transition-all">
+                    <button className="btn-premium bg-white border-2 border-gray-200 text-brand-dark !px-10 !py-4 hover:border-brand-blue hover:text-brand-blue">
                       View Shade Card
                     </button>
                   </div>
@@ -133,13 +133,13 @@ export default function Products() {
               <p className="text-gray-600 text-lg leading-relaxed">
                 Choosing the right paint depends on many factors like surface condition, exposure to sunlight, and desired finish. Our experts can help you select the perfect product for your specific needs.
               </p>
-              <button className="bg-brand-accent text-white px-10 py-4 rounded-full font-bold hover:bg-brand-purple transition-all">
+              <button className="btn-premium bg-brand-accent text-white !px-12 !py-5">
                 Talk to Our Expert Today
               </button>
             </div>
             <div className="lg:w-1/3">
               <img
-                src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg"
+                src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp"
                 alt="Expert Help"
                 className="rounded-3xl"
                 referrerPolicy="no-referrer"

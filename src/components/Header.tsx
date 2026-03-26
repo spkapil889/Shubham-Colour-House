@@ -9,9 +9,8 @@ const navLinks = [
   { name: 'Our Products', path: '/products' },
   { name: 'Paint Calculator', path: '/calculator' },
   { name: 'Brands', path: '/brands' },
-  { name: 'Need a Painter?', path: '/need-a-painter' },
+  { name: 'Need A Painter?', path: '/need-a-painter' },
   { name: 'Blogs', path: '/blogs' },
-  { name: 'Contact Us', path: '/contact' },
 ];
 
 export default function Header() {
@@ -32,33 +31,28 @@ export default function Header() {
   }, [location]);
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'glass-header py-3' : 'bg-transparent py-5'
-      )}
-    >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+    <header className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 pointer-events-none">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl md:rounded-full shadow-xl border border-gray-100 flex items-center justify-between px-6 py-2 md:py-3 pointer-events-auto">
+        <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/Group-34-2048x1492.png"
-            alt="Shubham Colour House"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/Group-34-2048x1492-1.webp"
+            alt="Logo"
             className="h-10 md:h-12 w-auto object-contain"
             referrerPolicy="no-referrer"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-brand-blue',
-                location.pathname === link.path
-                  ? 'text-brand-blue'
-                  : 'text-brand-dark'
+                'text-[15px] font-bold transition-colors hover:text-red-600',
+                link.name === 'Home' && location.pathname === '/'
+                  ? 'text-red-600'
+                  : 'text-gray-800'
               )}
             >
               {link.name}
@@ -66,63 +60,46 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <Link
-            to="/calculator"
-            className="flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-blue transition-colors"
-          >
-            <Calculator className="w-4 h-4" />
-            <span>Paint Calculator</span>
-          </Link>
+        <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="bg-brand-blue hover:bg-brand-purple text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105"
+            className="btn-premium bg-gradient-to-r from-[#D91E27] to-[#9E1B5E] text-white !px-8 !py-4 text-sm md:!px-10 md:!py-5 md:text-lg"
           >
-            Talk to Expert
+            Contact Us
           </Link>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="xl:hidden p-2 text-brand-dark"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="xl:hidden p-2 text-brand-dark"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden fixed inset-0 top-[64px] bg-white z-40 overflow-y-auto animate-in slide-in-from-top duration-300">
-          <div className="container mx-auto px-4 py-8 flex flex-col gap-6">
+        <div className="xl:hidden fixed inset-x-4 top-24 bg-white rounded-3xl shadow-2xl z-40 overflow-y-auto animate-in slide-in-from-top duration-300 pointer-events-auto border border-gray-100">
+          <div className="p-8 flex flex-col gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-lg font-semibold border-b border-gray-100 pb-4',
-                  location.pathname === link.path ? 'text-brand-blue' : 'text-brand-dark'
+                  'text-lg font-bold border-b border-gray-50 pb-4',
+                  location.pathname === link.path ? 'text-red-600' : 'text-gray-800'
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="flex flex-col gap-4 mt-4">
-              <Link
-                to="/calculator"
-                className="flex items-center justify-center gap-2 bg-brand-accent/10 text-brand-accent p-4 rounded-xl font-bold"
-              >
-                <Calculator className="w-5 h-5" />
-                <span>Paint Calculator</span>
-              </Link>
-              <Link
-                to="/contact"
-                className="flex items-center justify-center gap-2 bg-brand-blue text-white p-4 rounded-xl font-bold"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Talk to Expert</span>
-              </Link>
-            </div>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-[#D91E27] to-[#9E1B5E] text-white p-5 rounded-2xl font-bold text-center"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       )}

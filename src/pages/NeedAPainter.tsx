@@ -16,7 +16,7 @@ export default function NeedAPainter() {
       <section className="bg-brand-dark text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
+            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
             alt="Painter Hero"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -123,7 +123,7 @@ export default function NeedAPainter() {
                     <option>Wood/Metal Polishing</option>
                   </select>
                 </div>
-                <button className="w-full bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-brand-purple transition-all">
+                <button className="btn-premium bg-brand-blue text-white w-full !px-10 !py-5">
                   Submit Request
                 </button>
               </form>
@@ -140,16 +140,16 @@ export default function NeedAPainter() {
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="tel:+919829012345"
-                className="flex items-center gap-3 bg-gray-100 px-8 py-4 rounded-full font-bold hover:bg-brand-blue hover:text-white transition-all"
+                className="btn-premium bg-gray-100 text-brand-dark !px-10 !py-5 flex items-center gap-3"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 Call Us Now
               </a>
               <a
                 href="https://wa.me/919829012345"
-                className="flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all"
+                className="btn-premium bg-green-500 text-white !px-10 !py-5 flex items-center gap-3"
               >
-                <MessageSquare className="w-5 h-5" />
+                <MessageSquare className="w-6 h-6" />
                 WhatsApp Us
               </a>
             </div>
