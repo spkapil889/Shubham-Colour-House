@@ -5,7 +5,7 @@ import { UserCheck, ClipboardList, Paintbrush, CheckCircle2, Phone, MessageSquar
 const steps = [
   { title: 'Share Requirement', desc: 'Tell us about your space, area, and preferred timeline.', icon: ClipboardList, color: 'bg-brand-blue' },
   { title: 'Expert Guidance', desc: 'We help you choose the right products and estimate budget.', icon: UserCheck, color: 'bg-brand-purple' },
-  { title: 'Painter Matching', desc: 'We connect you with verified, skilled painters in Alwar.', icon: Paintbrush, color: 'bg-brand-orange' },
+  { title: 'Painter Matching', desc: 'We connect you with verified, skilled painters in Alwar.', icon: Paintbrush, color: 'bg-brand-accent' },
   { title: 'Start Work', desc: 'Begin your home transformation with confidence and support.', icon: CheckCircle2, color: 'bg-brand-red' },
 ];
 
@@ -18,10 +18,10 @@ export default function NeedAPainter() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="Painter Hero"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/20 to-brand-dark/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <motion.h1

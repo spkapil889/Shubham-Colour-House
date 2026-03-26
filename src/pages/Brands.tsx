@@ -44,10 +44,10 @@ export default function Brands() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="Brands Hero"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-purple/80 via-brand-purple/60 to-brand-purple/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-purple/60 via-brand-purple/30 to-brand-purple/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1
@@ -141,7 +141,7 @@ export default function Brands() {
                 <p className="text-gray-300 mb-8 leading-relaxed">
                   Different brands excel in different categories. Our experts can help you compare and choose the brand that best fits your budget and requirements.
                 </p>
-                <button className="w-full bg-brand-orange text-white py-4 rounded-xl font-bold hover:bg-brand-red transition-all">
+                <button className="w-full bg-brand-accent text-white py-4 rounded-xl font-bold hover:bg-brand-purple transition-all">
                   Talk to Our Brand Expert
                 </button>
               </div>

@@ -17,10 +17,10 @@ export default function About() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="About Hero"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/20 to-brand-dark/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1
@@ -59,7 +59,7 @@ export default function About() {
                   <h4 className="text-3xl font-bold text-brand-dark">1994</h4>
                   <p className="text-gray-500 text-sm">Year Founded</p>
                 </div>
-                <div className="border-l-4 border-brand-orange pl-6">
+                <div className="border-l-4 border-brand-accent pl-6">
                   <h4 className="text-3xl font-bold text-brand-dark">10,000+</h4>
                   <p className="text-gray-500 text-sm">Homes Transformed</p>
                 </div>

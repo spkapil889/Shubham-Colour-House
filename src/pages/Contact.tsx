@@ -11,10 +11,10 @@ export default function Contact() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="Contact Hero"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/80 via-brand-blue/60 to-brand-blue/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/60 via-brand-blue/30 to-brand-blue/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1
@@ -62,8 +62,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex gap-6">
-                  <div className="w-14 h-14 bg-brand-orange/10 rounded-2xl flex items-center justify-center shrink-0">
-                    <Phone className="w-7 h-7 text-brand-orange" />
+                  <div className="w-14 h-14 bg-brand-accent/10 rounded-2xl flex items-center justify-center shrink-0">
+                    <Phone className="w-7 h-7 text-brand-accent" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Call Us</h4>

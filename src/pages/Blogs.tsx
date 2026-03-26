@@ -71,10 +71,10 @@ export default function Blogs() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled.jpg"
             alt="Blogs Hero"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/80 via-brand-blue/60 to-brand-blue/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/60 via-brand-blue/30 to-brand-blue/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <motion.h1

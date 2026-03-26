@@ -65,15 +65,15 @@ export default function Calculator() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-orange text-white py-32 relative overflow-hidden">
+      <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="Calculator Hero"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-orange/80 via-brand-orange/60 to-brand-orange/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/60 via-brand-blue/30 to-brand-blue/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
@@ -238,20 +238,19 @@ export default function Calculator() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="bg-brand-dark text-white p-10 rounded-[2rem] relative overflow-hidden"
                   >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
                     <h3 className="text-xl font-bold mb-8 flex items-center gap-2">
-                      <CalcIcon className="w-5 h-5 text-brand-orange" />
+                      <CalcIcon className="w-5 h-5 text-brand-accent" />
                       Estimated Requirement
                     </h3>
                     <div className="text-center space-y-2">
-                      <span className="text-7xl font-extrabold text-brand-orange">{result}</span>
+                      <span className="text-7xl font-extrabold text-brand-accent">{result}</span>
                       <span className="text-2xl font-bold block text-gray-400 uppercase tracking-widest">Liters</span>
                     </div>
                     <div className="mt-10 pt-10 border-t border-white/10 space-y-4">
                       <p className="text-sm text-gray-400 italic">
                         *Actual paint requirement may vary based on surface condition, texture, absorption, and product type.
                       </p>
-                      <button className="w-full bg-white text-brand-dark py-4 rounded-xl font-bold hover:bg-brand-orange hover:text-white transition-all">
+                      <button className="w-full bg-white text-brand-dark py-4 rounded-xl font-bold hover:bg-brand-accent hover:text-white transition-all">
                         Get Exact Quote
                       </button>
                     </div>

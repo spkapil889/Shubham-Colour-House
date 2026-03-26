@@ -46,10 +46,10 @@ export default function Products() {
           <img
             src="https://shubhamcolourhouse.com/wp-content/uploads/2025/09/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled.jpg"
             alt="Products Hero"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/80 via-brand-blue/60 to-brand-blue/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/60 via-brand-blue/30 to-brand-blue/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1
@@ -126,14 +126,14 @@ export default function Products() {
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-[3rem] p-12 md:p-20 border border-gray-100 flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-2/3 space-y-6">
-              <div className="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center">
-                <Info className="w-8 h-8 text-brand-orange" />
+              <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center">
+                <Info className="w-8 h-8 text-brand-accent" />
               </div>
               <h2 className="text-4xl font-bold text-brand-dark">Confused About Which Product to Choose?</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 Choosing the right paint depends on many factors like surface condition, exposure to sunlight, and desired finish. Our experts can help you select the perfect product for your specific needs.
               </p>
-              <button className="bg-brand-orange text-white px-10 py-4 rounded-full font-bold hover:bg-brand-red transition-all">
+              <button className="bg-brand-accent text-white px-10 py-4 rounded-full font-bold hover:bg-brand-purple transition-all">
                 Talk to Our Expert Today
               </button>
             </div>

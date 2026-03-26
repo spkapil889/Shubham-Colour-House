@@ -69,7 +69,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             to="/calculator"
-            className="flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-brand-red transition-colors"
+            className="flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-blue transition-colors"
           >
             <Calculator className="w-4 h-4" />
             <span>Paint Calculator</span>
@@ -110,7 +110,7 @@ export default function Header() {
             <div className="flex flex-col gap-4 mt-4">
               <Link
                 to="/calculator"
-                className="flex items-center justify-center gap-2 bg-brand-orange/10 text-brand-orange p-4 rounded-xl font-bold"
+                className="flex items-center justify-center gap-2 bg-brand-accent/10 text-brand-accent p-4 rounded-xl font-bold"
               >
                 <Calculator className="w-5 h-5" />
                 <span>Paint Calculator</span>
