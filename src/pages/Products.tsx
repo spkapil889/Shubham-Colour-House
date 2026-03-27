@@ -6,34 +6,34 @@ const productCategories = [
   {
     id: 'interior',
     title: 'Interior Wall Paints',
-    description: 'Create the perfect ambiance with our range of interior finishes, from matte to high-gloss.',
+    description: 'Transform your living spaces with premium finishes and vibrant shades. Create the perfect ambiance with our range of interior finishes, from matte to high-gloss.',
     features: ['Washable & Durable', 'Stain Resistant', 'Low VOC / Eco-friendly', 'Rich Colour Depth'],
     brands: ['Asian Paints Royale', 'Berger Silk', 'Nerolac Impressions'],
-    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp'
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'exterior',
     title: 'Exterior Wall Paints',
-    description: 'Protect your home from harsh weather, dust, and algae with advanced exterior coatings.',
+    description: 'Weather-resistant protection for your home against harsh climates. Protect your home from harsh weather, dust, and algae with advanced exterior coatings.',
     features: ['Weather Guard Technology', 'Anti-Algal & Anti-Dust', 'Crack Bridging', 'Heat Reflective'],
     brands: ['Asian Paints Apex Ultima', 'Berger Weathercoat', 'Nippon Weatherbond'],
-    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp'
-  },
-  {
-    id: 'waterproofing',
-    title: 'Waterproofing Solutions',
-    description: 'Comprehensive leak-proof solutions for roofs, bathrooms, and external walls.',
-    features: ['High Elasticity', 'Negative Pressure Resistance', 'Damp-proof Technology', 'Long-lasting Warranty'],
-    brands: ['Dr. Fixit', 'Asian Paints SmartCare', 'Berger Home Shield'],
-    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp'
+    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'wood-metal',
     title: 'Wood & Metal Finishes',
-    description: 'Premium enamels and PU coatings to protect and beautify your furniture and metal fixtures.',
+    description: 'Durable and elegant finishes for all wooden and metal surfaces. Premium enamels and PU coatings to protect and beautify your furniture and metal fixtures.',
     features: ['High Gloss & Smooth Finish', 'Rust Protection', 'Scratch Resistant', 'Quick Drying'],
     brands: ['Asian Paints PU', 'Berger Luxol', 'Nerolac Enamel'],
-    image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp'
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Untitled-design-37.jpg'
+  },
+  {
+    id: 'waterproofing',
+    title: 'Waterproofing Solutions',
+    description: 'Advanced solutions for leak-proof homes and long-lasting protection. Comprehensive leak-proof solutions for roofs, bathrooms, and external walls.',
+    features: ['High Elasticity', 'Negative Pressure Resistance', 'Damp-proof Technology', 'Long-lasting Warranty'],
+    brands: ['Dr. Fixit', 'Asian Paints SmartCare', 'Berger Home Shield'],
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Untitled-design-36.jpg'
   },
   {
     id: 'automotive',
@@ -41,7 +41,39 @@ const productCategories = [
     description: 'High-performance coatings and finishes for vehicles, providing superior gloss, durability, and weather resistance.',
     features: ['High Gloss Finish', 'Scratch Resistance', 'UV Protection', 'Quick Drying'],
     brands: ['Nippon Paint', 'Asian Paints PPG', 'Berger Lewis'],
-    image: 'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'kitchen',
+    title: 'Sleek Kitchen',
+    description: 'Modern kitchen designs that combine functionality with stunning aesthetics. Complete modular solutions for your culinary space.',
+    features: ['Custom Cabinets', 'Smart Storage', 'Durable Countertops', 'Modern Lighting'],
+    brands: ['Sleek by Asian Paints', 'Hafele', 'Hettich'],
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Sleek-Kitchen.jpg'
+  },
+  {
+    id: 'bathroom',
+    title: 'Bathroom Design & Execution',
+    description: 'Complete bathroom transformations with premium fittings and finishes. Modern designs that maximize space and comfort.',
+    features: ['Premium Fittings', 'Waterproofing', 'Modern Tiling', 'Space Optimization'],
+    brands: ['Jaquar', 'Kohler', 'Hindware'],
+    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'wallpaper',
+    title: 'Designer Wallpaper',
+    description: 'Exquisite wallpaper collections to add texture and personality to your walls. Wide range of patterns and materials.',
+    features: ['Custom Designs', 'Easy Application', 'Durable Material', 'Wide Range of Textures'],
+    brands: ['Nilaya by Asian Paints', 'Marshalls', 'Sabyasachi for Nilaya'],
+    image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'texture',
+    title: 'Texture Finishes',
+    description: 'Unique wall textures that create depth and a luxurious feel in any room. Artistic patterns for a premium look.',
+    features: ['Artistic Patterns', 'Durable Finish', 'Custom Colors', 'Premium Look'],
+    brands: ['Asian Paints Royale Play', 'Berger Silk Illusions', 'Nerolac Impressions Ideals'],
+    image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800'
   }
 ];
 

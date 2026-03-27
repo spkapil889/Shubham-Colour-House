@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, CheckCircle2, Calculator, Paintbrush, ShieldCheck, Award, Users, ChevronRight, Star, Clock, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Calculator, Paintbrush, ShieldCheck, Award, Users, ChevronRight, Star, Clock, Zap, Search, FileText, Palette, Wrench, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const heroSlides = [
@@ -36,12 +36,12 @@ const categories = [
   },
   { 
     name: 'Wood & Metal', 
-    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=800', 
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Untitled-design-37.jpg', 
     description: 'Durable and elegant finishes for all wooden and metal surfaces.' 
   },
   { 
     name: 'Waterproofing', 
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800', 
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Untitled-design-36.jpg', 
     description: 'Advanced solutions for leak-proof homes and long-lasting protection.' 
   },
   { 
@@ -49,10 +49,92 @@ const categories = [
     image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800', 
     description: 'High-performance coatings for vehicles and industrial applications.' 
   },
+  { 
+    name: 'Sleek Kitchen', 
+    image: 'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Sleek-Kitchen.jpg', 
+    description: 'Modern kitchen designs that combine functionality with stunning aesthetics.' 
+  },
+  { 
+    name: 'Bathroom design & execution', 
+    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800', 
+    description: 'Complete bathroom transformations with premium fittings and finishes.' 
+  },
+  { 
+    name: 'Wallpaper', 
+    image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=800', 
+    description: 'Exquisite wallpaper collections to add texture and personality to your walls.' 
+  },
+  { 
+    name: 'Texture Finishes', 
+    image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800', 
+    description: 'Unique wall textures that create depth and a luxurious feel in any room.' 
+  },
+];
+
+const whyChooseUs = [
+  {
+    title: 'Free On-site Consultation',
+    desc: 'Book a free on-site consultation with our experts, who visit your space, understand your requirements, and guide you with the right painting solutions.',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Accurate & Specific Quotation',
+    desc: 'Receive a clear, accurate, and detailed quotation tailored to your space, surface condition, finish preference, and project scope.',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Certified Painters',
+    desc: 'Our trained and certified painters ensure professional workmanship, smooth finishes, and reliable execution for every project.',
+    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Colour Consultation',
+    desc: 'Our expert team helps you choose the right shades, combinations, and finishes to match your space, style, and lighting.',
+    image: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'On-time Job Completion',
+    desc: 'We follow a planned and supervised workflow to ensure your painting project is completed on time without compromising quality.',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Post-painting Clean-up',
+    desc: 'Our service includes proper site clean-up after completion, leaving your home or workspace neat, fresh, and ready to use.',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'After-Sales Services',
+    desc: 'We continue to support you even after the project is completed, with responsive service and dependable post-painting assistance.',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Eco-Friendly Products',
+    desc: 'We promote healthier living spaces by offering quality low-VOC and eco-friendly paint solutions that are safer for your family and environment.',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Mechanised Tools',
+    desc: 'We use modern mechanised tools for faster, smoother, and more efficient painting with reduced noise and better finish quality.',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Furniture & Floor Covering',
+    desc: 'We carefully protect your furniture, flooring, and valuable surfaces before starting work to keep your space safe and clean.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800'
+  }
 ];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo = direction === 'left' ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -117,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Who We Are */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <motion.div
@@ -177,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Counter Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trustStats.map((stat, idx) => (
@@ -198,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Section 4: Our Product Range */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mb-24 space-y-8 text-center mx-auto">
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Curated Collection</span>
@@ -208,12 +290,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((cat, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -15, shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)" }}
-                className="group bg-white rounded-[3rem] p-6 shadow-xl border border-black/5 transition-all duration-700 flex flex-col h-full"
+                whileHover={{ y: -10 }}
+                className="group bg-white rounded-[3rem] p-6 shadow-sm hover:shadow-xl border border-black/5 transition-all duration-500 flex flex-col h-full"
               >
                 {/* Image Container with Padding */}
                 <div className="aspect-square overflow-hidden rounded-[2.5rem] mb-8 relative bg-gray-50">
@@ -232,14 +314,6 @@ export default function Home() {
                   <p className="text-brand-muted text-sm leading-relaxed font-light line-clamp-2 flex-grow">
                     {cat.description}
                   </p>
-                  <div className="pt-4">
-                    <Link 
-                      to="/products" 
-                      className="inline-flex items-center gap-2 text-[#FE3A83] font-bold uppercase tracking-[0.2em] text-[11px] group/link"
-                    >
-                      View More <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -247,73 +321,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 5: Process */}
-      <section className="py-40 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
-            <div className="space-y-16">
-              <div className="space-y-8">
-                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Methodology</span>
-                <h2 className="text-5xl md:text-7xl font-black text-brand-dark leading-[1.1]">
-                  Precision in <br />
-                  <span className="text-gradient">Every Stroke</span>
-                </h2>
-                <p className="text-brand-muted text-lg leading-relaxed font-light max-w-xl">
-                  At Shubham Colour House, we value your time as much as the quality of your walls. Our streamlined process ensures a stress-free experience from start to finish.
-                </p>
-              </div>
-
-              <div className="space-y-12">
-                {[
-                  { step: '01', title: 'Expert Consultation', desc: 'Personalized guidance to understand your space, style, and budget.' },
-                  { step: '02', title: 'Product Selection', desc: 'Choose from premium paints like Asian, Berger, and Nippon.' },
-                  { step: '03', title: 'Professional Finish', desc: 'Timely completion with flawless results by trusted painters.' }
-                ].map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.2 }}
-                    className="flex gap-10 group"
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-brand-purple group-hover:border-brand-purple transition-all duration-500">
-                      <span className="text-brand-purple group-hover:text-white font-bold text-xs">{item.step}</span>
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-xl font-bold text-brand-dark">{item.title}</h4>
-                      <p className="text-brand-muted leading-relaxed max-w-md font-light text-sm">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
-                <img
-                  src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
-                  alt="Painting Process"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Section 6: CTA Section */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 bg-white p-16 md:p-24 rounded-[4rem] border border-black/5 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-purple/5 blur-[100px] rounded-full -mr-48 -mt-48" />
-            <div className="space-y-8 text-center lg:text-left relative z-10">
+          <div className="relative bg-white p-16 md:p-24 rounded-[4rem] border border-black/5 shadow-2xl overflow-hidden min-h-[500px] flex items-center">
+            {/* Background Image */}
+            <div 
+              className="absolute inset-0 z-0 opacity-20 lg:opacity-100"
+              style={{
+                backgroundImage: 'url("https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2026/03/Untitled-design-35-e1774631585892.jpg")',
+                backgroundPosition: 'right center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain'
+              }}
+            />
+            
+            {/* Gradient Overlay for Mobile Readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent lg:from-white lg:via-white/50 lg:to-transparent z-1" />
+
+            {/* Left Content */}
+            <div className="space-y-8 text-center lg:text-left relative z-10 lg:max-w-xl">
               <h2 className="text-5xl md:text-7xl font-black text-brand-dark leading-[1.1]">Ready to Paint <br /><span className="text-gradient">Your Dreams?</span></h2>
               <p className="text-lg text-brand-muted max-w-md font-light">Contact us today for expert color samples and detailed paint estimates.</p>
               <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
@@ -330,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Section 7: Top Quality */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative order-2 lg:order-1">
@@ -377,33 +404,55 @@ export default function Home() {
       </section>
 
       {/* Section 8: Why Choose Us */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-24 bg-black overflow-hidden relative">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-24 space-y-6">
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Advantage</span>
-            <h2 className="text-5xl md:text-7xl font-black text-brand-dark">Why <span className="text-gradient">Choose Us?</span></h2>
-            <p className="text-brand-muted text-xl leading-relaxed font-light">
-              With over 30 years of experience in Alwar, our team ensures every wall we touch reflects perfection and trust.
-            </p>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="text-6xl md:text-8xl font-black leading-tight text-white">
+                Why <br />
+                <span className="text-gradient">Choose Us?</span>
+              </h2>
+            </div>
+            <div className="flex gap-4">
+              <button 
+                onClick={() => scroll('left')}
+                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-all"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => scroll('right')}
+                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-all"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            {[
-              { title: 'Expertise', desc: '30+ years of professional guidance and flawless application.', icon: Award },
-              { title: 'Quality', desc: 'Authentic products from trusted brands for lasting beauty.', icon: ShieldCheck },
-              { title: 'Cleanliness', desc: 'Neat, organized work with minimal disruption to your home.', icon: Paintbrush }
-            ].map((item, idx) => (
+          <div 
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory"
+          >
+            {whyChooseUs.map((item, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -15 }}
-                className="premium-card text-center space-y-8 group"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                className="min-w-[300px] md:min-w-[400px] h-[400px] rounded-[2.5rem] bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/5 relative overflow-hidden group snap-start p-10 flex flex-col justify-end"
               >
-                <div className="w-24 h-24 rounded-full border border-gray-100 flex items-center justify-center mx-auto group-hover:border-brand-purple transition-colors">
-                  <item.icon className="w-10 h-10 text-brand-purple" />
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-brand-dark">{item.title}</h3>
-                  <p className="text-brand-muted leading-relaxed font-light">{item.desc}</p>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <h3 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed font-light">
+                  {item.desc}
+                </p>
+                
+                <div className="absolute bottom-8 right-8 w-12 h-12 rounded-full bg-brand-purple/20 border border-brand-purple/30 flex items-center justify-center text-brand-purple transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <ArrowRight className="w-5 h-5 -rotate-45" />
                 </div>
               </motion.div>
             ))}
@@ -412,7 +461,7 @@ export default function Home() {
       </section>
 
       {/* Section 9: Color Palette */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-mesh opacity-20" />
@@ -463,7 +512,7 @@ export default function Home() {
       </section>
 
       {/* Section 10: Trusted By */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Partners</span>
@@ -493,7 +542,7 @@ export default function Home() {
       </section>
 
       {/* Section 11: FAQ Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-20 space-y-6">
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Common Queries</span>
@@ -525,7 +574,7 @@ export default function Home() {
       </section>
 
       {/* Section 12: Final CTA */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark rounded-[4rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch relative">
             <div className="absolute top-0 right-0 w-full h-full bg-mesh opacity-20" />

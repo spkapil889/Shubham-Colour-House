@@ -13,13 +13,13 @@ export default function Footer() {
             <div className="lg:col-span-4 space-y-8">
               <Link to="/" className="inline-block">
                 <img
-                  src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/Group-34-2048x1492-1.webp"
+                  src="https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/09/Group-34-e1774630928285.webp"
                   alt="Logo"
-                  className="h-20 w-auto object-contain brightness-0 invert"
+                  className="h-24 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                   referrerPolicy="no-referrer"
                 />
               </Link>
-              <p className="text-white text-sm leading-relaxed font-light max-w-xs">
+              <p className="text-white text-base leading-relaxed font-normal max-w-xs">
                 Alwar's premier destination for premium paints and home transformation solutions since 1995. Elevating spaces with precision and elegance.
               </p>
               <div className="flex gap-4">
@@ -42,7 +42,7 @@ export default function Footer() {
 
             {/* Services Column */}
             <div className="lg:col-span-2 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FE3A83]">Services</h4>
+              <h4 className="text-[12px] font-black tracking-[0.4em] uppercase text-[#FE3A83]">Services</h4>
               <ul className="space-y-4">
                 {[
                   'Exterior Painting',
@@ -52,7 +52,7 @@ export default function Footer() {
                   'Furniture Painting'
                 ].map((item) => (
                   <li key={item}>
-                    <span className="text-white/80 hover:text-[#FE3A83] transition-colors text-sm font-light cursor-default">
+                    <span className="text-white/80 hover:text-[#FE3A83] transition-colors text-base font-normal cursor-default">
                       {item}
                     </span>
                   </li>
@@ -62,7 +62,7 @@ export default function Footer() {
 
             {/* Navigation Column */}
             <div className="lg:col-span-2 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FE3A83]">Navigation</h4>
+              <h4 className="text-[12px] font-black tracking-[0.4em] uppercase text-[#FE3A83]">Navigation</h4>
               <ul className="space-y-4">
                 {[
                   { name: 'About Us', path: '/about' },
@@ -70,7 +70,7 @@ export default function Footer() {
                   { name: 'Contact Us', path: '/contact' }
                 ].map((item) => (
                   <li key={item.name}>
-                    <Link to={item.path} className="text-white/80 hover:text-[#FE3A83] transition-colors text-sm font-light">
+                    <Link to={item.path} className="text-white/80 hover:text-[#FE3A83] transition-colors text-base font-normal">
                       {item.name}
                     </Link>
                   </li>
@@ -80,9 +80,9 @@ export default function Footer() {
 
             {/* Get in touch Column */}
             <div className="lg:col-span-4 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FE3A83]">Get in touch</h4>
+              <h4 className="text-[12px] font-black tracking-[0.4em] uppercase text-[#FE3A83]">Get in touch</h4>
               <div className="space-y-8">
-                <p className="text-white/80 font-light leading-relaxed text-sm">
+                <p className="text-white/80 font-normal leading-relaxed text-base">
                   Scheme No. 02, Vijay Commercial Complex, <br />
                   Bhagat Singh Circle, Plot No. 43, near Jai <br />
                   Marg, Alwar, Rajasthan 301001
@@ -92,7 +92,7 @@ export default function Footer() {
                     <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#FE3A83] transition-colors duration-500">
                       <Mail className="w-3 h-3 text-[#FE3A83] group-hover:text-white" />
                     </div>
-                    <span className="text-white/80 group-hover:text-[#FE3A83] transition-colors text-sm font-light">
+                    <span className="text-white/80 group-hover:text-[#FE3A83] transition-colors text-base font-normal">
                       info@shubhamcolourhouse.com
                     </span>
                   </a>
@@ -100,7 +100,7 @@ export default function Footer() {
                     <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#FE3A83] transition-colors duration-500">
                       <Phone className="w-3 h-3 text-[#FE3A83] group-hover:text-white" />
                     </div>
-                    <span className="text-white/80 group-hover:text-[#FE3A83] transition-colors text-sm font-light">
+                    <span className="text-white/80 group-hover:text-[#FE3A83] transition-colors text-base font-normal">
                       +6221.2002.2012
                     </span>
                   </a>
@@ -112,12 +112,12 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/20 pt-12">
-          <p className="text-white text-[10px] font-bold tracking-[0.2em] uppercase">
+          <p className="text-white text-[12px] font-black tracking-[0.2em] uppercase">
             Copyright © 2025 Shubham Colour House. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
-            <Link to="/privacy" className="text-white hover:text-[#FE3A83] text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-white hover:text-[#FE3A83] text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="text-white hover:text-[#FE3A83] text-[12px] font-black tracking-[0.2em] uppercase transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-white hover:text-[#FE3A83] text-[12px] font-black tracking-[0.2em] uppercase transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

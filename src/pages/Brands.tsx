@@ -5,33 +5,57 @@ import { ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 const brands = [
   {
     name: 'Asian Paints',
-    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp',
+    logo: 'https://static.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global-unification/resources/images/header/asian-paints-logo.webp',
     description: 'India\'s leading paint company offering a wide range of interior, exterior, and decorative paints.',
     highlights: ['Royale Luxury Emulsion', 'Apex Ultima Exterior', 'SmartCare Waterproofing']
   },
   {
-    name: 'Berger Paints',
-    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp',
-    description: 'Known for innovation and high-quality coatings for homes and industrial applications.',
-    highlights: ['Silk Glamor', 'Weathercoat Long Life', 'Home Shield Solutions']
-  },
-  {
     name: 'Nerolac',
-    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp',
+    logo: 'https://www.nerolac.com/themes/nerolac/img/nerolac-logo.png',
     description: 'A pioneer in industrial and decorative paints with a focus on eco-friendly products.',
     highlights: ['Impressions Eco Clean', 'Excel Everlast', 'Suraksha Plus']
   },
   {
     name: 'Nippon Paint',
-    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp',
+    logo: 'https://myassets.theedgemalaysia.com/pics/2023/Nippon-Paint_BC28122023_logo_tem.png',
     description: 'Global leader in paint technology providing advanced coating solutions.',
     highlights: ['Momento Special Effects', 'Weatherbond Advance', 'Odour-less AirCare']
   },
   {
+    name: 'Berger Paints',
+    logo: 'https://images.bergerpaints.com/s3fs-public/menu_icons/berger-paints-logo.png',
+    description: 'Known for innovation and high-quality coatings for homes and industrial applications.',
+    highlights: ['Silk Glamor', 'Weathercoat Long Life', 'Home Shield Solutions']
+  },
+  {
     name: 'JSW Paints',
-    logo: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/spacious-living-room-in-modern-apartment-2025-02-10-09-52-33-utc-1-scaled-1.webp',
+    logo: 'https://www.jswpaints.in/themes/custom/jsw_theme/images/new_page_logo.svg',
     description: 'Modern paint solutions with a focus on simplicity and high performance.',
     highlights: ['Halo Interior', 'Aurum Exterior', 'Pixa Range']
+  },
+  {
+    name: 'Birla Opus',
+    logo: 'https://assets.birlaopus.com/is/image/grasimindustries/footer-opus-logo-resize?dpr=off&ts=1740568574949',
+    description: 'Premium luxury paint solutions from the house of Aditya Birla Group.',
+    highlights: ['Luxury Emulsions', 'Designer Finishes', 'Eco-Safe Range']
+  },
+  {
+    name: 'Astral Paints',
+    logo: 'https://www.greatplacetowork.in/great/api/assets/uploads/5534/logo/logo.jpg',
+    description: 'Innovative adhesive and paint solutions for diverse architectural needs.',
+    highlights: ['Resiwood', 'Bondtite', 'Advanced Coatings']
+  },
+  {
+    name: 'Jenson & Nicholson',
+    logo: 'https://jnpl.in/wp-content/uploads/2023/03/JN-WebLogo.png',
+    description: 'One of India\'s oldest paint brands known for heritage and quality.',
+    highlights: ['Special Effects', 'Premium Enamels', 'Exterior Protection']
+  },
+  {
+    name: 'Shalimar Paints',
+    logo: 'https://5.imimg.com/data5/MD/WA/NJ/SELLER-3963613/rustex-no-1-boiler-paint-500x500.jpg',
+    description: 'A legacy of quality providing a wide array of decorative and industrial paints.',
+    highlights: ['Weather Pro', 'Signature Series', 'Superlac']
   }
 ];
 
@@ -82,11 +106,11 @@ export default function Brands() {
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 className="group flex flex-col items-center text-center"
               >
-                <div className="h-32 w-full flex items-center justify-center mb-10 bg-brand-paper rounded-[2rem] p-8 border border-brand-dark/5 group-hover:shadow-xl transition-all duration-500">
+                <div className="h-40 w-full flex items-center justify-center mb-10 bg-white rounded-[2rem] p-6 shadow-sm border border-brand-dark/5 group-hover:shadow-xl transition-all duration-500">
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-h-full w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="max-h-full w-auto object-contain transition-all duration-500"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -104,7 +128,7 @@ export default function Brands() {
                   ))}
                 </div>
                 <button className="mt-auto text-[10px] uppercase tracking-[0.2em] font-bold text-brand-dark flex items-center gap-2 group-hover:text-brand-purple transition-colors">
-                  Explore {brand.name} <ArrowRight className="w-3 h-3" />
+                  Get in touch <ArrowRight className="w-3 h-3" />
                 </button>
               </motion.div>
             ))}

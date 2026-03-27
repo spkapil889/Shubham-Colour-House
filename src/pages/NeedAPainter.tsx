@@ -1,12 +1,44 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { UserCheck, ClipboardList, Paintbrush, CheckCircle2, Phone, MessageSquare } from 'lucide-react';
+import { UserCheck, ClipboardList, Paintbrush, CheckCircle2, Phone, MessageSquare, Search, FileText, Palette, Wrench, Sparkles } from 'lucide-react';
 
 const steps = [
-  { title: 'Share Requirement', desc: 'Tell us about your space, area, and preferred timeline.', icon: ClipboardList, color: 'bg-brand-blue' },
-  { title: 'Expert Guidance', desc: 'We help you choose the right products and estimate budget.', icon: UserCheck, color: 'bg-brand-purple' },
-  { title: 'Painter Matching', desc: 'We connect you with verified, skilled painters in Alwar.', icon: Paintbrush, color: 'bg-brand-accent' },
-  { title: 'Start Work', desc: 'Begin your home transformation with confidence and support.', icon: CheckCircle2, color: 'bg-brand-red' },
+  { 
+    step: '01', 
+    title: 'Site Inspection', 
+    desc: 'Our experts visit your space to understand requirements and assess surface conditions.',
+    icon: Search
+  },
+  { 
+    step: '02', 
+    title: 'Detailed Quotation', 
+    desc: 'Receive a clear, transparent, and accurate estimate tailored to your project scope.',
+    icon: FileText
+  },
+  { 
+    step: '03', 
+    title: 'Color Selection', 
+    desc: 'Expert guidance to help you choose the perfect shades and finishes for your space.',
+    icon: Palette
+  },
+  { 
+    step: '04', 
+    title: 'Surface Preparation', 
+    desc: 'Meticulous cleaning and preparation to ensure a smooth, long-lasting paint finish.',
+    icon: Wrench
+  },
+  { 
+    step: '05', 
+    title: 'Professional Painting', 
+    desc: 'Execution by certified painters using premium tools for a flawless, high-quality result.',
+    icon: Paintbrush
+  },
+  { 
+    step: '06', 
+    title: 'Final Clean-up', 
+    desc: 'Post-painting site clean-up, leaving your home fresh, neat, and ready to enjoy.',
+    icon: Sparkles
+  }
 ];
 
 export default function NeedAPainter() {
@@ -46,22 +78,38 @@ export default function NeedAPainter() {
       {/* Process Steps */}
       <section className="py-40 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-24">
-            <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple mb-4">Our Methodology</h2>
-            <p className="text-3xl md:text-5xl font-black text-brand-dark">How It Works</p>
+          <div className="max-w-4xl mx-auto text-center mb-24 space-y-8">
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Methodology</span>
+            <h2 className="text-5xl md:text-8xl font-black text-brand-dark leading-[0.9]">
+              How It <br />
+              <span className="text-gradient">Works</span>
+            </h2>
+            <p className="text-brand-muted text-lg md:text-xl leading-relaxed font-light max-w-2xl mx-auto">
+              At Shubham Colour House, we value your time as much as the quality of your walls. Our streamlined process ensures a stress-free experience from start to finish.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {steps.map((step, idx) => (
-              <div key={idx} className="relative group">
-                <div className="relative z-10 bg-brand-paper p-10 rounded-[2.5rem] border border-brand-dark/5 transition-all text-center hover:shadow-xl hover:-translate-y-2 duration-500">
-                  <div className={`w-16 h-16 bg-brand-dark text-brand-purple rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg`}>
-                    <step.icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-brand-dark">{step.title}</h3>
-                  <p className="text-brand-muted text-sm leading-relaxed font-light">{step.desc}</p>
-                  <div className="mt-8 text-[10px] font-bold text-brand-purple/40 tracking-widest uppercase">Step 0{idx + 1}</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {steps.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group relative p-10 rounded-[2.5rem] bg-brand-paper border border-brand-dark/5 hover:shadow-2xl transition-all duration-500"
+              >
+                <div className="absolute -top-6 -left-6 w-16 h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-500 border border-brand-dark/5">
+                  <item.icon className="w-6 h-6" />
                 </div>
-              </div>
+                <div className="space-y-6 pt-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-4xl font-black text-black/5 group-hover:text-brand-purple/10 transition-colors duration-500">{item.step}</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-brand-dark">{item.title}</h4>
+                  <p className="text-brand-muted leading-relaxed font-light text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
