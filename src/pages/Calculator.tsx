@@ -71,18 +71,18 @@ export default function Calculator() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/20 mb-8"
           >
-            <CalcIcon className="w-4 h-4 text-brand-gold" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold">Precision Tools</span>
+            <CalcIcon className="w-4 h-4 text-brand-purple" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-purple">Precision Tools</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-serif mb-8 tracking-tight text-brand-dark"
+            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
           >
-            Paint <span className="italic text-brand-gold">Calculator</span>
+            Paint <span className="text-gradient">Calculator</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export default function Calculator() {
                         <select
                           value={formData.roomType}
                           onChange={(e) => setFormData({ ...formData, roomType: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors appearance-none text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors appearance-none text-brand-dark font-medium"
                         >
                           <option value="interior">Interior Walls</option>
                           <option value="exterior">Exterior Walls</option>
@@ -121,7 +121,7 @@ export default function Calculator() {
                         <select
                           value={formData.paintType}
                           onChange={(e) => setFormData({ ...formData, paintType: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors appearance-none text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors appearance-none text-brand-dark font-medium"
                         >
                           <option value="standard">Standard Finish</option>
                           <option value="premium">Premium Luxury</option>
@@ -136,7 +136,7 @@ export default function Calculator() {
                           value={formData.width}
                           onChange={(e) => setFormData({ ...formData, width: e.target.value })}
                           placeholder="e.g. 12"
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium placeholder:text-brand-muted/30"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors text-brand-dark font-medium placeholder:text-brand-muted/30"
                         />
                       </div>
                       <div className="space-y-3">
@@ -147,7 +147,7 @@ export default function Calculator() {
                           value={formData.height}
                           onChange={(e) => setFormData({ ...formData, height: e.target.value })}
                           placeholder="e.g. 10"
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium placeholder:text-brand-muted/30"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors text-brand-dark font-medium placeholder:text-brand-muted/30"
                         />
                       </div>
                       <div className="space-y-3">
@@ -156,7 +156,7 @@ export default function Calculator() {
                           type="number"
                           value={formData.walls}
                           onChange={(e) => setFormData({ ...formData, walls: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors text-brand-dark font-medium"
                         />
                       </div>
                       <div className="space-y-3">
@@ -164,7 +164,7 @@ export default function Calculator() {
                         <select
                           value={formData.coats}
                           onChange={(e) => setFormData({ ...formData, coats: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors appearance-none text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors appearance-none text-brand-dark font-medium"
                         >
                           <option value="1">1 Coat (Touch up)</option>
                           <option value="2">2 Coats (Standard)</option>
@@ -177,7 +177,7 @@ export default function Calculator() {
                           type="number"
                           value={formData.doors}
                           onChange={(e) => setFormData({ ...formData, doors: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors text-brand-dark font-medium"
                         />
                       </div>
                       <div className="space-y-3">
@@ -186,7 +186,7 @@ export default function Calculator() {
                           type="number"
                           value={formData.windows}
                           onChange={(e) => setFormData({ ...formData, windows: e.target.value })}
-                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium"
+                          className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-colors text-brand-dark font-medium"
                         />
                       </div>
                     </div>
@@ -197,7 +197,7 @@ export default function Calculator() {
                         id="ceiling"
                         checked={formData.ceiling}
                         onChange={(e) => setFormData({ ...formData, ceiling: e.target.checked })}
-                        className="w-5 h-5 accent-brand-gold rounded-full border-brand-dark/10"
+                        className="w-5 h-5 accent-brand-purple rounded-full border-brand-dark/10"
                       />
                       <label htmlFor="ceiling" className="text-sm font-medium text-brand-dark cursor-pointer">
                         Include Ceiling in calculation?
@@ -207,7 +207,7 @@ export default function Calculator() {
                     <div className="flex flex-col sm:flex-row gap-6 pt-4">
                       <button
                         type="submit"
-                        className="flex-grow btn-premium-gold"
+                        className="flex-grow btn-premium-gradient"
                       >
                         Calculate Requirement
                       </button>
@@ -231,13 +231,13 @@ export default function Calculator() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="bg-brand-dark text-white p-10 rounded-[2.5rem] relative overflow-hidden shadow-2xl"
                   >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 blur-3xl rounded-full -mr-16 -mt-16" />
-                    <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold mb-10 flex items-center gap-2">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 blur-3xl rounded-full -mr-16 -mt-16" />
+                    <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-purple mb-10 flex items-center gap-2">
                       <CalcIcon className="w-3 h-3" />
                       Estimated Requirement
                     </h3>
                     <div className="text-center space-y-4 py-8">
-                      <span className="text-8xl font-serif text-brand-gold leading-none">{result}</span>
+                      <span className="text-8xl font-black text-brand-purple leading-none">{result}</span>
                       <span className="text-xs font-bold block text-white/40 uppercase tracking-[0.3em]">Liters Needed</span>
                     </div>
                     <div className="mt-10 pt-10 border-t border-white/5 space-y-8">
@@ -254,13 +254,13 @@ export default function Calculator() {
                     <div className="w-20 h-20 rounded-full bg-brand-paper flex items-center justify-center mb-8">
                       <CalcIcon className="w-8 h-8 text-brand-muted/30" />
                     </div>
-                    <h3 className="text-lg font-serif text-brand-dark mb-4">Awaiting Input</h3>
+                    <h3 className="text-lg font-bold text-brand-dark mb-4">Awaiting Input</h3>
                     <p className="text-sm text-brand-muted leading-relaxed">Fill the form to see your <br />estimated paint requirement</p>
                   </div>
                 )}
 
                 <div className="bg-white p-10 rounded-[2.5rem] border border-brand-dark/5 space-y-6 shadow-sm">
-                  <div className="flex items-center gap-3 text-brand-gold">
+                  <div className="flex items-center gap-3 text-brand-purple">
                     <Info className="w-4 h-4" />
                     <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Expert Advice</span>
                   </div>
@@ -272,7 +272,7 @@ export default function Calculator() {
                       'Check the coverage area on the paint bucket.'
                     ].map((tip, idx) => (
                       <li key={idx} className="flex gap-4 text-sm text-brand-muted leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0 mt-0.5" />
                         {tip}
                       </li>
                     ))}

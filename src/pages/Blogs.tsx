@@ -72,18 +72,18 @@ export default function Blogs() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/20 mb-8"
           >
-            <Calendar className="w-4 h-4 text-brand-gold" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold">Editorial Journal</span>
+            <Calendar className="w-4 h-4 text-brand-purple" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-purple">Editorial Journal</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-serif mb-8 tracking-tight text-brand-dark"
+            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
           >
-            Paint & <span className="italic text-brand-gold">Colour</span> Blog
+            Paint & <span className="text-gradient">Colour</span> Blog
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ export default function Blogs() {
                 className={`px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 ${
                   cat === 'All' 
                     ? 'bg-brand-dark text-white shadow-lg' 
-                    : 'bg-brand-paper text-brand-muted hover:bg-brand-gold hover:text-white'
+                    : 'bg-brand-paper text-brand-muted hover:bg-brand-purple hover:text-white'
                 }`}
               >
                 {cat}
@@ -118,7 +118,7 @@ export default function Blogs() {
             <input
               type="text"
               placeholder="Search articles..."
-              className="w-full bg-brand-paper border border-brand-dark/5 rounded-full px-14 py-4 focus:outline-none focus:border-brand-gold transition-all text-sm text-brand-dark placeholder:text-brand-muted/30"
+              className="w-full bg-brand-paper border border-brand-dark/5 rounded-full px-14 py-4 focus:outline-none focus:border-brand-purple transition-all text-sm text-brand-dark placeholder:text-brand-muted/30"
             />
           </div>
         </div>
@@ -138,8 +138,8 @@ export default function Blogs() {
                 />
               </div>
               <div className="lg:w-2/5 p-12 md:p-20 flex flex-col justify-center space-y-8">
-                <span className="text-brand-gold font-bold tracking-[0.3em] uppercase text-[10px]">{blogPosts[0].category}</span>
-                <h2 className="text-4xl md:text-5xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors leading-tight">
+                <span className="text-brand-purple font-bold tracking-[0.3em] uppercase text-[10px]">{blogPosts[0].category}</span>
+                <h2 className="text-4xl md:text-5xl font-black text-brand-dark group-hover:text-brand-purple transition-colors leading-tight">
                   {blogPosts[0].title}
                 </h2>
                 <p className="text-brand-muted text-lg leading-relaxed font-light">
@@ -157,7 +157,7 @@ export default function Blogs() {
                 </div>
                 <div className="pt-6">
                   <span className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold text-brand-dark group-hover:gap-5 transition-all">
-                    Read Full Article <ArrowRight className="w-4 h-4 text-brand-gold" />
+                    Read Full Article <ArrowRight className="w-4 h-4 text-brand-purple" />
                   </span>
                 </div>
               </div>
@@ -189,8 +189,8 @@ export default function Blogs() {
                     />
                   </div>
                   <div className="space-y-6 px-4">
-                    <span className="text-brand-gold font-bold text-[10px] uppercase tracking-[0.3em]">{post.category}</span>
-                    <h3 className="text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors line-clamp-2 leading-snug">
+                    <span className="text-brand-purple font-bold text-[10px] uppercase tracking-[0.3em]">{post.category}</span>
+                    <h3 className="text-2xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors line-clamp-2 leading-snug">
                       {post.title}
                     </h3>
                     <p className="text-brand-muted text-sm line-clamp-3 leading-relaxed font-light">
@@ -202,7 +202,7 @@ export default function Blogs() {
                         {post.date}
                       </div>
                       <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-dark flex items-center gap-2 group-hover:gap-4 transition-all">
-                        Read More <ChevronRight className="w-3 h-3 text-brand-gold" />
+                        Read More <ChevronRight className="w-3 h-3 text-brand-purple" />
                       </span>
                     </div>
                   </div>
@@ -217,10 +217,10 @@ export default function Blogs() {
       <section className="py-40 bg-white">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark text-white rounded-[4rem] p-12 md:p-24 text-center space-y-12 relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 blur-3xl rounded-full -mr-32 -mt-32" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/5 blur-3xl rounded-full -mr-32 -mt-32" />
             <div className="space-y-6 relative z-10">
-              <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold">Stay Inspired</h2>
-              <p className="text-4xl md:text-6xl font-serif">Get Paint Tips in <br /><span className="italic">Your Inbox</span></p>
+              <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Stay Inspired</h2>
+              <p className="text-4xl md:text-6xl font-black">Get Paint Tips in <br /><span className="text-gradient">Your Inbox</span></p>
             </div>
             <p className="text-white/40 max-w-2xl mx-auto relative z-10 font-light leading-relaxed">
               Subscribe to our journal for the latest colour trends, expert DIY tips, and exclusive offers from Shubham Colour House.
@@ -229,9 +229,9 @@ export default function Blogs() {
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="flex-grow bg-white/5 border-b border-white/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-all text-sm placeholder:text-white/20"
+                className="flex-grow bg-white/5 border-b border-white/10 px-0 py-4 focus:outline-none focus:border-brand-purple transition-all text-sm placeholder:text-white/20"
               />
-              <button className="btn-premium-gold !px-12">
+              <button className="btn-premium-gradient !px-12">
                 Subscribe
               </button>
             </form>

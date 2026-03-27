@@ -45,18 +45,18 @@ export default function Brands() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/20 mb-8"
           >
-            <ShieldCheck className="w-4 h-4 text-brand-gold" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold">Authorized Partners</span>
+            <ShieldCheck className="w-4 h-4 text-brand-purple" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-purple">Authorized Partners</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-serif mb-8 tracking-tight text-brand-dark"
+            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
           >
-            Our Trusted <span className="italic text-brand-gold">Partners</span>
+            Our Trusted <span className="text-gradient">Partners</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -90,20 +90,20 @@ export default function Brands() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <h3 className="text-2xl font-serif mb-4 text-brand-dark">{brand.name}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-brand-dark">{brand.name}</h3>
                 <p className="text-brand-muted text-sm mb-8 leading-relaxed font-light px-4">
                   {brand.description}
                 </p>
                 <div className="w-full space-y-4 text-left mb-10 bg-brand-paper/50 p-6 rounded-2xl border border-brand-dark/5">
-                  <p className="text-[10px] font-bold text-brand-gold uppercase tracking-[0.2em] mb-4">Popular Products</p>
+                  <p className="text-[10px] font-bold text-brand-purple uppercase tracking-[0.2em] mb-4">Popular Products</p>
                   {brand.highlights.map(h => (
                     <div key={h} className="flex items-center gap-3 text-xs font-medium text-brand-dark">
-                      <CheckCircle2 className="w-3 h-3 text-brand-gold" />
+                      <CheckCircle2 className="w-3 h-3 text-brand-purple" />
                       {h}
                     </div>
                   ))}
                 </div>
-                <button className="mt-auto text-[10px] uppercase tracking-[0.2em] font-bold text-brand-dark flex items-center gap-2 group-hover:text-brand-gold transition-colors">
+                <button className="mt-auto text-[10px] uppercase tracking-[0.2em] font-bold text-brand-dark flex items-center gap-2 group-hover:text-brand-purple transition-colors">
                   Explore {brand.name} <ArrowRight className="w-3 h-3" />
                 </button>
               </motion.div>
@@ -116,14 +116,14 @@ export default function Brands() {
       <section className="py-40 bg-brand-paper">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark text-white rounded-[3rem] p-12 md:p-24 overflow-hidden relative shadow-2xl">
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-gold/5 -skew-x-12 translate-x-1/4" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-purple/5 -skew-x-12 translate-x-1/4" />
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               <div className="space-y-12">
                 <div className="space-y-6">
-                  <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold">Quality Assurance</h2>
-                  <p className="text-4xl md:text-6xl font-serif leading-tight">
+                  <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Quality Assurance</h2>
+                  <p className="text-4xl md:text-6xl font-black leading-tight">
                     Why Choose <br />
-                    <span className="italic text-brand-gold">Branded</span> Paints?
+                    <span className="text-gradient">Branded</span> Paints?
                   </p>
                 </div>
                 <div className="space-y-10">
@@ -135,10 +135,10 @@ export default function Brands() {
                   ].map((item, idx) => (
                     <div key={idx} className="flex gap-6">
                       <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                        <ShieldCheck className="w-6 h-6 text-brand-gold" />
+                        <ShieldCheck className="w-6 h-6 text-brand-purple" />
                       </div>
                       <div>
-                        <h4 className="font-serif text-2xl mb-2">{item.title}</h4>
+                        <h4 className="font-bold text-2xl mb-2">{item.title}</h4>
                         <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -146,11 +146,11 @@ export default function Brands() {
                 </div>
               </div>
               <div className="bg-white/5 p-12 md:p-16 rounded-[2.5rem] border border-white/10 backdrop-blur-sm">
-                <h3 className="text-3xl font-serif mb-8">Need Help Choosing?</h3>
+                <h3 className="text-3xl font-bold mb-8">Need Help Choosing?</h3>
                 <p className="text-white/60 mb-12 leading-relaxed font-light">
                   Different brands excel in different categories. Our experts can help you compare and choose the brand that best fits your budget and requirements.
                 </p>
-                <button className="btn-premium-gold w-full">
+                <button className="btn-premium-gradient w-full">
                   Talk to Our Brand Expert
                 </button>
               </div>

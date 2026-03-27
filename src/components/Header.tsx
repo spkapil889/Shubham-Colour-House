@@ -63,7 +63,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="btn-premium"
+            className="btn-premium-gradient"
           >
             Contact
           </Link>
@@ -88,7 +88,7 @@ export default function Header() {
                 to={link.path}
                 className={cn(
                   'text-lg font-bold border-b border-gray-50 pb-4',
-                  location.pathname === link.path ? 'text-red-600' : 'text-gray-800'
+                  location.pathname === link.path ? 'text-brand-purple' : 'text-gray-800'
                 )}
               >
                 {link.name}
@@ -96,7 +96,7 @@ export default function Header() {
             ))}
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-[#D91E27] to-[#9E1B5E] text-white p-5 rounded-2xl font-bold text-center"
+              className="btn-premium-gradient text-center py-5"
             >
               Contact Us
             </Link>

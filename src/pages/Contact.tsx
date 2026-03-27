@@ -14,10 +14,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Get in Touch</span>
-            <h1 className="text-6xl md:text-9xl font-serif font-black text-brand-dark tracking-tight leading-[0.9]">
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Get in Touch</span>
+            <h1 className="text-6xl md:text-9xl font-black text-brand-dark tracking-tight leading-[0.9]">
               Let's <br />
-              <span className="italic font-light text-brand-gold">Connect</span>
+              <span className="text-gradient">Connect</span>
             </h1>
             <p className="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto font-light leading-relaxed">
               Have a question or need a quote? Reach out to Alwar's paint experts today.
@@ -32,8 +32,8 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-16">
               <div className="space-y-8">
-                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Contact Details</span>
-                <h2 className="text-4xl font-serif font-black text-brand-dark leading-tight">Reach Our <br />Showroom</h2>
+                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Contact Details</span>
+                <h2 className="text-4xl font-black text-brand-dark leading-tight">Reach Our <br />Showroom</h2>
                 <p className="text-brand-muted font-light leading-relaxed">
                   Visit our showroom in Alwar or contact us through any of the following channels. We're here to help!
                 </p>
@@ -42,7 +42,7 @@ export default function Contact() {
               <div className="space-y-12">
                 <div className="flex gap-8 group">
                   <div className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
-                    <MapPin className="w-5 h-5 text-brand-gold" />
+                    <MapPin className="w-5 h-5 text-brand-purple" />
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-sm font-bold tracking-[0.1em] uppercase text-brand-dark">Our Showroom</h4>
@@ -54,7 +54,7 @@ export default function Contact() {
 
                 <div className="flex gap-8 group">
                   <div className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
-                    <Phone className="w-5 h-5 text-brand-gold" />
+                    <Phone className="w-5 h-5 text-brand-purple" />
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-sm font-bold tracking-[0.1em] uppercase text-brand-dark">Call Us</h4>
@@ -65,7 +65,7 @@ export default function Contact() {
 
                 <div className="flex gap-8 group">
                   <div className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
-                    <Mail className="w-5 h-5 text-brand-gold" />
+                    <Mail className="w-5 h-5 text-brand-purple" />
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-sm font-bold tracking-[0.1em] uppercase text-brand-dark">Email Us</h4>
@@ -76,7 +76,7 @@ export default function Contact() {
 
                 <div className="flex gap-8 group">
                   <div className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
-                    <Clock className="w-5 h-5 text-brand-gold" />
+                    <Clock className="w-5 h-5 text-brand-purple" />
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-sm font-bold tracking-[0.1em] uppercase text-brand-dark">Working Hours</h4>
@@ -87,10 +87,10 @@ export default function Contact() {
               </div>
 
               <div className="pt-12 border-t border-black/5">
-                <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold mb-8">Follow Us</h4>
+                <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple mb-8">Follow Us</h4>
                 <div className="flex gap-4">
                   {[Facebook, Instagram, Twitter].map((Icon, idx) => (
-                    <a key={idx} href="#" className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all duration-500 text-brand-gold">
+                    <a key={idx} href="#" className="w-12 h-12 bg-brand-paper rounded-2xl flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all duration-500 text-brand-purple">
                       <Icon className="w-5 h-5" />
                     </a>
                   ))}
@@ -100,27 +100,27 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-brand-paper p-12 md:p-20 rounded-3xl border border-black/5 shadow-2xl">
-                <h3 className="text-3xl font-serif font-black text-brand-dark mb-12">Send Us a Message</h3>
+              <div className="premium-card p-12 md:p-20">
+                <h3 className="text-3xl font-black text-brand-dark mb-12">Send Us a Message</h3>
                 <form className="space-y-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Your Name</label>
-                      <input type="text" placeholder="John Doe" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-gold transition-colors font-light text-sm" />
+                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-purple">Your Name</label>
+                      <input type="text" placeholder="John Doe" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-purple transition-colors font-light text-sm" />
                     </div>
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Email Address</label>
-                      <input type="email" placeholder="john@example.com" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-gold transition-colors font-light text-sm" />
+                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-purple">Email Address</label>
+                      <input type="email" placeholder="john@example.com" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-purple transition-colors font-light text-sm" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Phone Number</label>
-                      <input type="tel" placeholder="+91 98290 12345" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-gold transition-colors font-light text-sm" />
+                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-purple">Phone Number</label>
+                      <input type="tel" placeholder="+91 98290 12345" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-purple transition-colors font-light text-sm" />
                     </div>
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Subject</label>
-                      <select className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-gold transition-colors font-light text-sm appearance-none">
+                      <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-purple">Subject</label>
+                      <select className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-purple transition-colors font-light text-sm appearance-none">
                         <option>General Inquiry</option>
                         <option>Product Quote</option>
                         <option>Waterproofing Consultation</option>
@@ -129,10 +129,10 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold">Your Message</label>
-                    <textarea rows={6} placeholder="How can we help you?" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-gold transition-colors font-light text-sm"></textarea>
+                    <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-purple">Your Message</label>
+                    <textarea rows={6} placeholder="How can we help you?" className="w-full bg-white border border-black/5 rounded-xl px-8 py-5 focus:outline-none focus:border-brand-purple transition-colors font-light text-sm"></textarea>
                   </div>
-                  <button className="btn-premium-gold w-full">
+                  <button className="btn-premium-gradient w-full">
                     Send Message
                   </button>
                 </form>
@@ -143,14 +143,14 @@ export default function Contact() {
       </section>
 
       {/* Map Placeholder */}
-      <section className="h-[600px] bg-brand-paper relative overflow-hidden">
+      <section className="h-[600px] relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center bg-brand-paper">
           <div className="text-center space-y-8 relative z-10">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-2xl border border-black/5">
-              <MapPin className="w-8 h-8 text-brand-gold" />
+              <MapPin className="w-8 h-8 text-brand-purple" />
             </div>
             <div className="space-y-4">
-              <h3 className="text-3xl font-serif font-black text-brand-dark">Find Us in Alwar</h3>
+              <h3 className="text-3xl font-black text-brand-dark">Find Us in Alwar</h3>
               <p className="text-brand-muted font-light">Vijay Commercial Complex, Bhagat Singh Circle, Alwar</p>
             </div>
             <a

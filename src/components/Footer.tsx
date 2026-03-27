@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from 'lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark pt-32 pb-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-brand-dark via-brand-dark to-brand-purple/20 pt-32 pb-16 relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Main Content Grid */}
         <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-12 md:p-20 mb-20 border border-white/10 relative z-10">
@@ -32,7 +32,7 @@ export default function Footer() {
                   <a
                     key={idx}
                     href={social.href}
-                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-500 text-white"
+                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all duration-500 text-white"
                   >
                     <social.icon className="w-4 h-4" />
                   </a>
@@ -42,7 +42,7 @@ export default function Footer() {
 
             {/* Services Column */}
             <div className="lg:col-span-2 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Services</h4>
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Services</h4>
               <ul className="space-y-4">
                 {[
                   'Exterior Painting',
@@ -52,7 +52,7 @@ export default function Footer() {
                   'Furniture Painting'
                 ].map((item) => (
                   <li key={item}>
-                    <span className="text-white/60 hover:text-brand-gold transition-colors text-sm font-light cursor-default">
+                    <span className="text-white/60 hover:text-brand-purple transition-colors text-sm font-light cursor-default">
                       {item}
                     </span>
                   </li>
@@ -62,7 +62,7 @@ export default function Footer() {
 
             {/* Navigation Column */}
             <div className="lg:col-span-2 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Navigation</h4>
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Navigation</h4>
               <ul className="space-y-4">
                 {[
                   { name: 'About Us', path: '/about' },
@@ -70,7 +70,7 @@ export default function Footer() {
                   { name: 'Contact Us', path: '/contact' }
                 ].map((item) => (
                   <li key={item.name}>
-                    <Link to={item.path} className="text-white/60 hover:text-brand-gold transition-colors text-sm font-light">
+                    <Link to={item.path} className="text-white/60 hover:text-brand-purple transition-colors text-sm font-light">
                       {item.name}
                     </Link>
                   </li>
@@ -80,7 +80,7 @@ export default function Footer() {
 
             {/* Get in touch Column */}
             <div className="lg:col-span-4 space-y-8">
-              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Get in touch</h4>
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Get in touch</h4>
               <div className="space-y-8">
                 <p className="text-white/60 font-light leading-relaxed text-sm">
                   Scheme No. 02, Vijay Commercial Complex, <br />
@@ -89,18 +89,18 @@ export default function Footer() {
                 </p>
                 <div className="space-y-4">
                   <a href="mailto:info@shubhamcolourhouse.com" className="flex items-center gap-4 group">
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-500">
-                      <Mail className="w-3 h-3 text-brand-gold group-hover:text-white" />
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-500">
+                      <Mail className="w-3 h-3 text-brand-purple group-hover:text-white" />
                     </div>
-                    <span className="text-white/60 group-hover:text-brand-gold transition-colors text-sm font-light">
+                    <span className="text-white/60 group-hover:text-brand-purple transition-colors text-sm font-light">
                       info@shubhamcolourhouse.com
                     </span>
                   </a>
                   <a href="tel:+622120022012" className="flex items-center gap-4 group">
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-500">
-                      <Phone className="w-3 h-3 text-brand-gold group-hover:text-white" />
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-500">
+                      <Phone className="w-3 h-3 text-brand-purple group-hover:text-white" />
                     </div>
-                    <span className="text-white/60 group-hover:text-brand-gold transition-colors text-sm font-light">
+                    <span className="text-white/60 group-hover:text-brand-purple transition-colors text-sm font-light">
                       +6221.2002.2012
                     </span>
                   </a>
@@ -116,8 +116,8 @@ export default function Footer() {
             Copyright © 2025 Shubham Colour House. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
-            <Link to="/privacy" className="text-white/30 hover:text-brand-gold text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-white/30 hover:text-brand-gold text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="text-white/30 hover:text-brand-purple text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-white/30 hover:text-brand-purple text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
