@@ -12,23 +12,43 @@ const heroSlides = [
 const trustStats = [
   { label: 'Happy Customers', value: '14K+', icon: Users },
   { label: 'Projects Completed', value: '17K+', icon: CheckCircle2 },
-  { label: 'Certified Experts', value: '124+', icon: Award },
   { label: 'Satisfaction Rate', value: '100%', icon: ShieldCheck },
 ];
 
 const partnerLogos = [
-  'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp',
-  'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp',
-  'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp',
-  'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp',
-  'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/warm-and-cozy-composition-of-living-room-interior-2024-10-17-17-58-03-utc-1-2048x1365-1.webp',
+  'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/10/1736746743528-e1759473636649.jpeg',
+  'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/10/d-mart-niti-khand-3-indirapuram-ghaziabad-after-shave-lotion-dealers-15tr5mkyrq.avif',
+  'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/10/apna-ghar-logo-e1715241203127.webp',
+  'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/10/images.jpeg',
+  'https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/10/images-1-e1759474049420.jpeg',
 ];
 
 const categories = [
-  { name: 'Interior Paints', image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/5.webp', description: 'Transform your living spaces with premium finishes.' },
-  { name: 'Exterior Paints', image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/6.webp', description: 'Weather-resistant protection for your home.' },
-  { name: 'Wood & Metal', image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/7.webp', description: 'Durable and elegant finishes for all surfaces.' },
-  { name: 'Waterproofing', image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp', description: 'Advanced solutions for leak-proof homes.' },
+  { 
+    name: 'Interior Paints', 
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800', 
+    description: 'Transform your living spaces with premium finishes and vibrant shades.' 
+  },
+  { 
+    name: 'Exterior Paints', 
+    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=800', 
+    description: 'Weather-resistant protection for your home against harsh climates.' 
+  },
+  { 
+    name: 'Wood & Metal', 
+    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=800', 
+    description: 'Durable and elegant finishes for all wooden and metal surfaces.' 
+  },
+  { 
+    name: 'Waterproofing', 
+    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800', 
+    description: 'Advanced solutions for leak-proof homes and long-lasting protection.' 
+  },
+  { 
+    name: 'Automotive paint', 
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800', 
+    description: 'High-performance coatings for vehicles and industrial applications.' 
+  },
 ];
 
 export default function Home() {
@@ -44,14 +64,31 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-brand-paper bg-mesh min-h-screen">
       {/* Section 1: Hero Banner */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#FE3A83] via-[#F931B6] to-[#F97316]">
-        <div className="absolute inset-0 bg-mesh opacity-20" />
-        <div className="container mx-auto px-4 relative z-20 text-center pt-20">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image Slideshow */}
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentSlide}
+              src={heroSlides[currentSlide]}
+              alt="Hero Background"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+              className="absolute inset-0 w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay for readability */}
+        </div>
+
+        <div className="container mx-auto px-4 relative z-20 pt-20">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto space-y-10"
+            className="max-w-4xl space-y-10 text-left"
           >
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-white mb-6 block opacity-90">
               Premium Painting Services
@@ -60,11 +97,11 @@ export default function Home() {
               Transform Your Space <br />
               with Elegance
             </h1>
-            <p className="text-white/90 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+            <p className="text-white/90 text-lg md:text-2xl max-w-2xl font-medium leading-relaxed mb-12">
               Alwar's premier destination for premium paints and home transformation solutions since 1995.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/contact" className="btn-premium bg-white !text-brand-purple hover:bg-white/90 shadow-2xl">
+            <div className="flex flex-wrap gap-6">
+              <Link to="/contact" className="btn-premium-gradient shadow-2xl">
                 Get Started
               </Link>
               <Link to="/products" className="btn-outline !text-white !border-white/30 hover:!bg-white/10">
@@ -142,7 +179,7 @@ export default function Home() {
       {/* Section 3: Counter Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trustStats.map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -171,28 +208,38 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {categories.map((cat, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -10 }}
-                className="group premium-card p-0 overflow-hidden"
+                whileHover={{ y: -15, shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)" }}
+                className="group bg-white rounded-[3rem] p-6 shadow-xl border border-black/5 transition-all duration-700 flex flex-col h-full"
               >
-                <div className="aspect-[4/5] overflow-hidden relative">
+                {/* Image Container with Padding */}
+                <div className="aspect-square overflow-hidden rounded-[2.5rem] mb-8 relative bg-gray-50">
                   <img
                     src={cat.image}
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <div className="p-8 space-y-4">
-                  <h3 className="text-2xl font-bold text-brand-dark">{cat.name}</h3>
-                  <p className="text-brand-muted text-sm leading-relaxed font-light line-clamp-2">{cat.description}</p>
-                  <Link to="/products" className="inline-flex items-center gap-2 text-brand-purple font-bold uppercase tracking-[0.2em] text-[10px] group/link">
-                    View More <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+
+                {/* Content */}
+                <div className="px-4 flex flex-col flex-grow space-y-4">
+                  <h3 className="text-3xl font-black text-brand-dark leading-tight">{cat.name}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed font-light line-clamp-2 flex-grow">
+                    {cat.description}
+                  </p>
+                  <div className="pt-4">
+                    <Link 
+                      to="/products" 
+                      className="inline-flex items-center gap-2 text-[#FE3A83] font-bold uppercase tracking-[0.2em] text-[11px] group/link"
+                    >
+                      View More <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}

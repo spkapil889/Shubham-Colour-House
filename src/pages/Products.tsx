@@ -37,7 +37,7 @@ const productCategories = [
   },
   {
     id: 'automotive',
-    title: 'Automotive Paints',
+    title: 'Automotive paint',
     description: 'High-performance coatings and finishes for vehicles, providing superior gloss, durability, and weather resistance.',
     features: ['High Gloss Finish', 'Scratch Resistance', 'UV Protection', 'Quick Drying'],
     brands: ['Nippon Paint', 'Asian Paints PPG', 'Berger Lewis'],

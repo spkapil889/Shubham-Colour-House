@@ -32,12 +32,12 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 pointer-events-none">
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl md:rounded-full shadow-xl border border-gray-100 flex items-center justify-between px-6 py-2 md:py-3 pointer-events-auto">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl md:rounded-full shadow-xl border border-gray-100 flex items-center justify-between px-6 py-3 md:py-4 pointer-events-auto">
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
-            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/Group-34-2048x1492-1.webp"
+            src="https://pink-beaver-690950.hostingersite.com/wp-content/uploads/2025/09/Group-34-e1774630928285.webp"
             alt="Logo"
-            className="h-10 md:h-12 w-auto object-contain"
+            className="h-14 w-auto object-contain"
             referrerPolicy="no-referrer"
           />
         </Link>
