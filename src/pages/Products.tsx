@@ -34,83 +34,93 @@ const productCategories = [
     features: ['High Gloss & Smooth Finish', 'Rust Protection', 'Scratch Resistant', 'Quick Drying'],
     brands: ['Asian Paints PU', 'Berger Luxol', 'Nerolac Enamel'],
     image: 'https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/8.webp'
+  },
+  {
+    id: 'automotive',
+    title: 'Automotive Paints',
+    description: 'High-performance coatings and finishes for vehicles, providing superior gloss, durability, and weather resistance.',
+    features: ['High Gloss Finish', 'Scratch Resistance', 'UV Protection', 'Quick Drying'],
+    brands: ['Nippon Paint', 'Asian Paints PPG', 'Berger Lewis'],
+    image: 'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?auto=format&fit=crop&q=80&w=1000'
   }
 ];
 
 export default function Products() {
   return (
-    <div>
+    <div className="bg-brand-paper">
       {/* Hero */}
-      <section className="bg-brand-blue text-white py-32 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
-            alt="Products Hero"
-            className="w-full h-full object-cover opacity-70"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/60 via-brand-blue/30 to-brand-blue/80" />
-        </div>
+      <section className="pt-48 pb-32 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-8xl font-bold mb-6 tracking-tight"
+            className="space-y-8"
           >
-            Our Product Range
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light"
-          >
-            Discover premium paints, coatings, and waterproofing solutions from the world's leading brands.
-          </motion.p>
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Our Selection</span>
+            <h1 className="text-6xl md:text-9xl font-serif font-black text-brand-dark tracking-tight leading-[0.9]">
+              Premium <br />
+              <span className="italic font-light text-brand-gold">Curations</span>
+            </h1>
+            <p className="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto font-light leading-relaxed">
+              Discover premium paints, coatings, and waterproofing solutions from the world's leading brands.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Product List */}
-      <section className="py-24 bg-white">
+      <section className="py-40 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-32">
+          <div className="space-y-48">
             {productCategories.map((cat, idx) => (
-              <div key={cat.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-                <div className={idx % 2 !== 0 ? 'lg:order-2' : ''}>
+              <div key={cat.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-24 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  className={idx % 2 !== 0 ? 'lg:order-2' : ''}
+                >
                   <div className="relative">
-                    <img
-                      src={cat.image}
-                      alt={cat.title}
-                      className="rounded-[2rem] w-full h-[400px] object-cover"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl border border-gray-100">
-                      <p className="text-brand-blue font-bold text-sm mb-2">Recommended Brands</p>
+                    <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+                      <img
+                        src={cat.image}
+                        alt={cat.title}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                    <div className="absolute -bottom-8 -right-8 bg-brand-dark p-8 rounded-2xl shadow-2xl border border-white/10 hidden md:block max-w-[280px]">
+                      <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold mb-4">Recommended Brands</p>
                       <div className="flex flex-wrap gap-2">
                         {cat.brands.map(b => (
-                          <span key={b} className="text-xs bg-gray-100 px-3 py-1 rounded-full font-medium">{b}</span>
+                          <span key={b} className="text-[10px] text-white/60 bg-white/5 px-3 py-1 rounded-full font-medium border border-white/10">{b}</span>
                         ))}
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className={`space-y-8 ${idx % 2 !== 0 ? 'lg:order-1' : ''}`}>
-                  <h2 className="text-4xl font-bold text-brand-dark">{cat.title}</h2>
-                  <p className="text-gray-600 text-lg leading-relaxed">{cat.description}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                </motion.div>
+                <div className={`space-y-10 ${idx % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                  <div className="space-y-6">
+                    <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Category {idx + 1}</span>
+                    <h2 className="text-5xl md:text-6xl font-serif font-black text-brand-dark leading-[1.1]">{cat.title}</h2>
+                    <p className="text-brand-muted text-lg leading-relaxed font-light">{cat.description}</p>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {cat.features.map(f => (
-                      <div key={f} className="flex items-center gap-3 text-brand-dark font-medium">
-                        <CheckCircle2 className="w-5 h-5 text-brand-blue" />
+                      <div key={f} className="flex items-center gap-4 text-brand-dark font-medium text-sm">
+                        <div className="w-5 h-5 rounded-full bg-brand-paper flex items-center justify-center">
+                          <CheckCircle2 className="w-3 h-3 text-brand-gold" />
+                        </div>
                         {f}
                       </div>
                     ))}
                   </div>
-                  <div className="pt-6 flex flex-wrap gap-4">
-                    <button className="btn-premium bg-brand-blue text-white !px-10 !py-4 flex items-center gap-2">
-                      Get a Quote <ArrowRight className="w-5 h-5" />
+                  <div className="pt-8 flex flex-wrap gap-6">
+                    <button className="btn-premium-gold">
+                      Get a Quote
                     </button>
-                    <button className="btn-premium bg-white border-2 border-gray-200 text-brand-dark !px-10 !py-4 hover:border-brand-blue hover:text-brand-blue">
+                    <button className="btn-premium">
                       View Shade Card
                     </button>
                   </div>
@@ -122,28 +132,33 @@ export default function Products() {
       </section>
 
       {/* Expert Consultation CTA */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-40 bg-brand-paper">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-[3rem] p-12 md:p-20 border border-gray-100 flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-2/3 space-y-6">
-              <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center">
-                <Info className="w-8 h-8 text-brand-accent" />
+          <div className="bg-brand-dark rounded-3xl p-12 md:p-24 border border-white/10 flex flex-col lg:flex-row items-center gap-20 shadow-2xl overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/10 blur-[120px] rounded-full -mr-48 -mt-48" />
+            <div className="lg:w-2/3 space-y-10 relative z-10">
+              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center">
+                <Info className="w-6 h-6 text-brand-gold" />
               </div>
-              <h2 className="text-4xl font-bold text-brand-dark">Confused About Which Product to Choose?</h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Choosing the right paint depends on many factors like surface condition, exposure to sunlight, and desired finish. Our experts can help you select the perfect product for your specific needs.
-              </p>
-              <button className="btn-premium bg-brand-accent text-white !px-12 !py-5">
-                Talk to Our Expert Today
+              <div className="space-y-6">
+                <h2 className="text-5xl md:text-7xl font-serif font-black text-white leading-[1.1]">Confused About <br /><span className="italic font-light text-brand-gold">Your Choice?</span></h2>
+                <p className="text-white/60 text-lg leading-relaxed font-light max-w-xl">
+                  Choosing the right paint depends on many factors like surface condition, exposure to sunlight, and desired finish. Our experts can help you select the perfect product for your specific needs.
+                </p>
+              </div>
+              <button className="btn-premium-gold">
+                Talk to Our Expert
               </button>
             </div>
-            <div className="lg:w-1/3">
-              <img
-                src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp"
-                alt="Expert Help"
-                className="rounded-3xl"
-                referrerPolicy="no-referrer"
-              />
+            <div className="lg:w-1/3 relative z-10">
+              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-square">
+                <img
+                  src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp"
+                  alt="Expert Help"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -10,10 +10,10 @@ const heroSlides = [
 ];
 
 const trustStats = [
-  { label: 'Happy Customer', value: '14K+', icon: Users, color: 'text-blue-600', bgColor: 'bg-blue-50', borderColor: 'border-blue-100' },
-  { label: 'Project Done', value: '17K+', icon: CheckCircle2, color: 'text-purple-600', bgColor: 'bg-purple-50', borderColor: 'border-purple-100' },
-  { label: 'Certified Expertise', value: '124+', icon: Award, color: 'text-blue-600', bgColor: 'bg-blue-50', borderColor: 'border-blue-100' },
-  { label: 'Guarantee Satisfying', value: '100%', icon: ShieldCheck, color: 'text-red-600', bgColor: 'bg-red-50', borderColor: 'border-red-100' },
+  { label: 'Happy Customers', value: '14K+', icon: Users },
+  { label: 'Projects Completed', value: '17K+', icon: CheckCircle2 },
+  { label: 'Certified Experts', value: '124+', icon: Award },
+  { label: 'Satisfaction Rate', value: '100%', icon: ShieldCheck },
 ];
 
 const partnerLogos = [
@@ -44,97 +44,84 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-white">
       {/* Section 1: Hero Banner */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-dark">
-        {/* Background Slider */}
-        <div className="absolute inset-0 z-0">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={currentSlide}
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.05 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              src={heroSlides[currentSlide]}
-              alt={`Slide ${currentSlide + 1}`}
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-brand-dark/50 backdrop-blur-[1px]" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-20 pt-32 md:pt-40">
-          <div className="max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="text-white"
-            >
-              <div className="inline-flex items-center bg-brand-orange text-white px-4 py-2 rounded-sm mb-10">
-                <span className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-paper">
+        <div className="container mx-auto px-4 relative z-20 pt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-muted mb-6 block">
                   Est. 1995 • Alwar's Premier Paint House
                 </span>
-              </div>
-              
-              <h1 className="text-[14vw] md:text-[8vw] font-serif font-black leading-[0.9] mb-12 tracking-tight">
-                Premium <br />
-                <span className="text-transparent stroke-white stroke-1 italic" style={{ WebkitTextStroke: '1px white' }}>Paint</span> <br />
-                <span className="text-brand-orange">Solutions</span>
-              </h1>
-
-              <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
-                <Link
-                  to="/products"
-                  className="btn-premium bg-brand-orange text-white !px-12 !py-6 text-xl md:text-2xl"
-                >
-                  <span className="relative z-10 flex items-center gap-3">
-                    EXPLORE COLLECTION <ArrowRight className="w-6 h-6" />
-                  </span>
-                </Link>
-                
-                <Link
-                  to="/calculator"
-                  className="group flex items-center gap-4 text-white/80 hover:text-white transition-colors"
-                >
-                  <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-orange transition-colors">
-                    <Calculator className="w-6 h-6" />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-xs uppercase tracking-widest opacity-60">Free Tool</p>
-                    <p className="font-bold">Paint Calculator</p>
-                  </div>
-                </Link>
-              </div>
-            </motion.div>
+                <h1 className="text-[12vw] lg:text-[7vw] font-serif font-black leading-[0.85] tracking-tighter text-brand-dark mb-8">
+                  Refined <br />
+                  <span className="italic font-light text-brand-gold">Aesthetics</span> <br />
+                  For Your Walls
+                </h1>
+                <p className="text-brand-muted text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
+                  Shubham Colour House brings three decades of expertise in premium coatings and architectural finishes to Alwar.
+                </p>
+                <div className="flex flex-wrap gap-6">
+                  <Link to="/products" className="btn-premium-gradient">
+                    Explore Collection
+                  </Link>
+                  <Link to="/calculator" className="btn-premium">
+                    Paint Calculator
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+            <div className="lg:col-span-5 relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentSlide}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                    src={heroSlides[currentSlide]}
+                    alt="Hero"
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-brand-dark/10" />
+              </motion.div>
+              {/* Floating Element */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl hidden xl:block max-w-[240px] border border-black/5"
+              >
+                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-gold mb-2">Featured Finish</p>
+                <p className="text-sm font-serif italic text-brand-dark">"The perfect balance between luxury and durability for modern homes."</p>
+              </motion.div>
+            </div>
           </div>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-4">
-          {heroSlides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentSlide(idx)}
-              className={`h-1.5 transition-all duration-500 rounded-full ${
-                currentSlide === idx ? 'w-12 bg-brand-orange' : 'w-4 bg-white/30'
-              }`}
-            />
-          ))}
         </div>
       </section>
 
       {/* Section 2: Who We Are */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="py-40 bg-brand-paper relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative z-10 rounded-[3rem] overflow-hidden transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+              <div className="relative z-10 rounded-2xl overflow-hidden aspect-square">
                 <img
                   src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/open-space-living-room-with-a-big-couch-in-a-moder-2025-03-24-09-30-01-utc-1-scaled-1.webp"
                   alt="Modern Living Room"
@@ -142,54 +129,42 @@ export default function Home() {
                   referrerPolicy="no-referrer"
                 />
               </div>
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl" />
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-10"
+              className="space-y-12"
             >
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <span className="h-1 w-12 bg-brand-orange rounded-full" />
-                  <span className="text-brand-orange font-bold tracking-widest uppercase text-sm">Who We Are</span>
-                </div>
-                <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark leading-tight">
-                  30 Years of Adding <br />
-                  <span className="text-brand-orange italic">Color to Alwar</span>
+              <div className="space-y-8">
+                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Heritage & Vision</span>
+                <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark leading-[1.1]">
+                  Three Decades of <br />
+                  <span className="italic font-light text-brand-gold">Excellence</span>
                 </h2>
-                <p className="text-gray-600 text-xl leading-relaxed font-light">
-                  Since our inception, Shubham Colour House has been at the forefront of the paint industry. We don't just sell paint; we provide complete home transformation solutions with a legacy of trust.
+                <p className="text-brand-muted text-lg leading-relaxed font-light max-w-xl">
+                  Since 1995, Shubham Colour House has been Alwar's most trusted destination for architectural coatings. We combine traditional values with modern technology to deliver unmatched results.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 {[
-                  { title: 'Top Brands', desc: 'Authorized dealer for Asian, Berger & more.' },
+                  { title: 'Top Brands', desc: 'Authorized dealer for Asian & Berger.' },
                   { title: 'Expert Advice', desc: 'Personalized color consultations.' },
                   { title: 'Waterproofing', desc: 'Advanced leak-proof solutions.' },
-                  { title: 'Verified Painters', desc: 'Hassle-free professional work.' }
+                  { title: 'Verified Painters', desc: 'Professional, hassle-free work.' }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-6 p-2 group">
-                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors">
-                      <CheckCircle2 className="w-6 h-6 text-brand-orange group-hover:text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-brand-dark mb-1">{item.title}</h4>
-                      <p className="text-gray-500 leading-relaxed">{item.desc}</p>
-                    </div>
+                  <div key={idx} className="space-y-3">
+                    <h4 className="text-sm font-bold text-brand-dark uppercase tracking-widest">{item.title}</h4>
+                    <p className="text-brand-muted text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
 
-              <Link
-                to="/about"
-                className="btn-premium bg-brand-dark text-white !px-12 !py-6 text-xl md:text-2xl"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  Our Full Journey <ArrowRight className="w-6 h-6" />
-                </span>
+              <Link to="/about" className="btn-premium">
+                Our Story
               </Link>
             </motion.div>
           </div>
@@ -197,9 +172,9 @@ export default function Home() {
       </section>
 
       {/* Section 3: Counter Section */}
-      <section className="py-24 relative overflow-hidden bg-brand-dark">
+      <section className="py-32 relative overflow-hidden bg-brand-dark">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-16">
             {trustStats.map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -209,8 +184,8 @@ export default function Home() {
                 transition={{ delay: idx * 0.1 }}
                 className="text-center space-y-4"
               >
-                <h3 className="text-5xl md:text-7xl font-serif font-black text-brand-orange">{stat.value}</h3>
-                <p className="text-white/60 font-bold uppercase tracking-widest text-xs">{stat.label}</p>
+                <h3 className="text-5xl md:text-7xl font-serif font-black text-white">{stat.value}</h3>
+                <p className="text-brand-gold font-bold uppercase tracking-[0.3em] text-[10px]">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -218,26 +193,24 @@ export default function Home() {
       </section>
 
       {/* Section 4: Our Product Range */}
-      <section className="py-32 relative overflow-hidden bg-white">
+      <section className="py-40 relative overflow-hidden bg-brand-paper">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <div className="inline-block px-4 py-1 rounded-full bg-brand-orange/10 text-brand-orange font-bold text-xs tracking-widest uppercase">
-              Our Collection
-            </div>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark">Our Product Range</h2>
-            <p className="text-gray-600 text-xl leading-relaxed font-light">
+          <div className="max-w-3xl mb-24 space-y-8">
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Curated Collection</span>
+            <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark leading-[1.1]">Our Product <br /><span className="italic font-light text-brand-gold">Range</span></h2>
+            <p className="text-brand-muted text-lg leading-relaxed font-light max-w-xl">
               Explore our comprehensive collection of paints and coatings designed for every surface and requirement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map((cat, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -15 }}
-                className="group"
+                whileHover={{ y: -10 }}
+                className="group bg-white rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all duration-500"
               >
-                <div className="aspect-[3/4] overflow-hidden relative rounded-[2rem] mb-8">
+                <div className="aspect-[4/5] overflow-hidden relative">
                   <img
                     src={cat.image}
                     alt={cat.name}
@@ -246,11 +219,11 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-serif font-black text-brand-dark group-hover:text-brand-orange transition-colors">{cat.name}</h3>
-                  <p className="text-gray-500 leading-relaxed font-light">{cat.description}</p>
-                  <Link to="/products" className="inline-flex items-center gap-2 text-brand-orange font-bold uppercase tracking-widest text-sm group/link">
-                    View Collection <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                <div className="p-8 space-y-4">
+                  <h3 className="text-2xl font-serif font-black text-brand-dark">{cat.name}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed font-light">{cat.description}</p>
+                  <Link to="/products" className="inline-flex items-center gap-2 text-brand-gold font-bold uppercase tracking-[0.2em] text-[10px] group/link">
+                    View More <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </motion.div>
@@ -260,29 +233,26 @@ export default function Home() {
       </section>
 
       {/* Section 5: Process */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="py-40 bg-brand-paper relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="space-y-12">
-              <div className="space-y-6">
-                <span className="text-brand-orange font-bold tracking-widest uppercase text-sm flex items-center gap-3">
-                  <div className="w-10 h-1 bg-brand-orange rounded-full" />
-                  How it works
-                </span>
-                <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark leading-tight">
-                  Always on Time and <br />
-                  <span className="text-brand-orange italic">Never Delay</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+            <div className="space-y-16">
+              <div className="space-y-8">
+                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Our Methodology</span>
+                <h2 className="text-5xl md:text-7xl font-serif font-black text-brand-dark leading-[1.1]">
+                  Precision in <br />
+                  <span className="italic font-light text-brand-gold">Every Stroke</span>
                 </h2>
-                <p className="text-gray-600 text-xl leading-relaxed font-light">
+                <p className="text-brand-muted text-lg leading-relaxed font-light max-w-xl">
                   At Shubham Colour House, we value your time as much as the quality of your walls. Our streamlined process ensures a stress-free experience from start to finish.
                 </p>
               </div>
 
-              <div className="space-y-10">
+              <div className="space-y-12">
                 {[
-                  { step: '01', title: 'Expert Consultation', desc: 'Personalized guidance to understand your space, style, and budget.', icon: Users },
-                  { step: '02', title: 'Product Selection', desc: 'Choose from premium paints like Asian, Berger, and Nippon.', icon: Paintbrush },
-                  { step: '03', title: 'Professional Finish', desc: 'Timely completion with flawless results by trusted painters.', icon: CheckCircle2 }
+                  { step: '01', title: 'Expert Consultation', desc: 'Personalized guidance to understand your space, style, and budget.' },
+                  { step: '02', title: 'Product Selection', desc: 'Choose from premium paints like Asian, Berger, and Nippon.' },
+                  { step: '03', title: 'Professional Finish', desc: 'Timely completion with flawless results by trusted painters.' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -290,14 +260,14 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.2 }}
-                    className="flex gap-8 group"
+                    className="flex gap-10 group"
                   >
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-brand-orange transition-colors">
-                      <span className="text-brand-orange font-bold text-lg">{item.step}</span>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-brand-gold group-hover:border-brand-gold transition-all duration-500">
+                      <span className="text-brand-gold group-hover:text-white font-bold text-xs">{item.step}</span>
                     </div>
-                    <div className="pt-2">
-                      <h4 className="text-2xl font-serif font-black text-brand-dark mb-2">{item.title}</h4>
-                      <p className="text-gray-500 leading-relaxed max-w-md font-light">{item.desc}</p>
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-serif font-black text-brand-dark">{item.title}</h4>
+                      <p className="text-brand-muted leading-relaxed max-w-md font-light text-sm">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -305,12 +275,12 @@ export default function Home() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="rounded-[4rem] overflow-hidden">
+              <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
                 <img
                   src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
                   alt="Painting Process"
@@ -324,31 +294,19 @@ export default function Home() {
       </section>
 
       {/* Section 6: CTA Section */}
-      <section className="py-32 bg-brand-dark relative overflow-hidden">
+      <section className="py-40 bg-brand-dark relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 bg-white/5 backdrop-blur-xl p-12 md:p-24 rounded-[4rem] border border-white/10">
-            <div className="text-white space-y-6 text-center lg:text-left">
-              <h2 className="text-5xl md:text-7xl font-serif font-black leading-tight">Ready to Paint <br />Your Dreams?</h2>
-              <p className="text-xl text-white/60 max-w-md font-light">Contact us today for expert color samples and detailed paint estimates.</p>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 bg-white/5 backdrop-blur-xl p-16 md:p-24 rounded-3xl border border-white/10">
+            <div className="text-white space-y-8 text-center lg:text-left">
+              <h2 className="text-5xl md:text-7xl font-serif font-black leading-[1.1]">Ready to Paint <br /><span className="italic font-light text-brand-gold">Your Dreams?</span></h2>
+              <p className="text-lg text-white/60 max-w-md font-light">Contact us today for expert color samples and detailed paint estimates.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
-              <Link
-                to="/contact"
-                className="btn-premium bg-brand-orange text-white !px-12 !py-6 text-xl md:text-2xl"
-              >
-                <span className="relative z-10">Request Estimates</span>
+              <Link to="/contact" className="btn-premium-gold">
+                Request Estimates
               </Link>
-              <Link
-                to="/calculator"
-                className="group flex items-center gap-4 text-white/80 hover:text-white transition-colors"
-              >
-                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-orange transition-colors">
-                  <Calculator className="w-6 h-6" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs uppercase tracking-widest opacity-60">Free Tool</p>
-                  <p className="font-bold">Paint Calculator</p>
-                </div>
+              <Link to="/calculator" className="btn-premium">
+                Paint Calculator
               </Link>
             </div>
           </div>
@@ -550,55 +508,44 @@ export default function Home() {
       </section>
 
       {/* Section 12: Final CTA */}
-      <section className="py-32 bg-white">
+      <section className="py-40 bg-brand-paper">
         <div className="container mx-auto px-4">
-          <div className="bg-blue-600 rounded-[4rem] md:rounded-[6rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch">
+          <div className="bg-brand-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch">
             {/* Left Side: Visual */}
-            <div className="lg:w-1/2 relative min-h-[400px]">
+            <div className="lg:w-1/2 relative min-h-[500px]">
               <img
                 src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
                 alt="Premium Interior"
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent" />
-              <div className="absolute bottom-12 left-12 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-white max-w-xs hidden md:block">
-                <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-80">Premium Quality</p>
-                <p className="text-lg font-medium leading-tight">Every stroke tells a story of elegance and durability.</p>
-              </div>
+              <div className="absolute inset-0 bg-brand-dark/20" />
             </div>
 
             {/* Right Side: Content */}
-            <div className="lg:w-1/2 p-12 md:p-24 flex flex-col justify-center text-white relative">
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
-              <div className="relative z-10 space-y-8">
+            <div className="lg:w-1/2 p-16 md:p-24 flex flex-col justify-center text-white relative">
+              <div className="relative z-10 space-y-10">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-[0.9] mb-6">
-                    READY TO <br />
-                    <span className="text-brand-dark">TRANSFORM?</span>
+                  <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold mb-6 block">Final Call</span>
+                  <h2 className="text-5xl md:text-7xl font-serif font-black leading-[1.1] mb-8">
+                    Ready to <br />
+                    <span className="italic font-light text-brand-gold">Transform?</span>
                   </h2>
-                  <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-xl">
+                  <p className="text-lg text-white/70 font-light leading-relaxed max-w-xl">
                     Visit our showroom today or talk to our experts for a free consultation and the best deals on premium paints.
                   </p>
                 </motion.div>
 
-                <div className="flex flex-wrap gap-6 pt-4">
-                  <Link
-                    to="/contact"
-                    className="group bg-white text-blue-600 px-8 py-4 md:px-12 md:py-6 rounded-2xl font-black text-lg md:text-2xl hover:bg-brand-dark hover:text-white transition-all transform hover:-translate-y-1 flex items-center gap-3 shadow-lg"
-                  >
-                    CONTACT US <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                <div className="flex flex-wrap gap-6">
+                  <Link to="/contact" className="btn-premium-gold">
+                    Contact Us
                   </Link>
-                  <Link
-                    to="/need-a-painter"
-                    className="group bg-brand-dark text-white px-8 py-4 md:px-12 md:py-6 rounded-2xl font-black text-lg md:text-2xl hover:bg-brand-blue transition-all transform hover:-translate-y-1 flex items-center gap-3 shadow-lg"
-                  >
-                    FIND A PAINTER <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <Link to="/need-a-painter" className="btn-premium">
+                    Find a Painter
                   </Link>
                 </div>
               </div>

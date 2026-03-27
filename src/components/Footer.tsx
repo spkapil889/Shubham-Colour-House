@@ -4,29 +4,45 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from 'lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-orange pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-brand-dark pt-32 pb-16 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* Main White Card */}
-        <div className="bg-white rounded-[3rem] p-10 md:p-16 mb-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Main Content Grid */}
+        <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-12 md:p-20 mb-20 border border-white/10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Logo Column */}
-            <div className="lg:col-span-3">
-              <Link to="/" className="flex items-center gap-4 mb-6">
+            <div className="lg:col-span-4 space-y-8">
+              <Link to="/" className="inline-block">
                 <img
                   src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/Group-34-2048x1492-1.webp"
                   alt="Logo"
-                  className="h-20 md:h-24 w-auto object-contain"
+                  className="h-20 w-auto object-contain brightness-0 invert"
                   referrerPolicy="no-referrer"
                 />
               </Link>
-              <p className="text-gray-600 text-sm font-medium leading-relaxed">
-                Alwar's premier destination for premium paints and home transformation solutions since 1995.
+              <p className="text-white/50 text-sm leading-relaxed font-light max-w-xs">
+                Alwar's premier destination for premium paints and home transformation solutions since 1995. Elevating spaces with precision and elegance.
               </p>
+              <div className="flex gap-4">
+                {[
+                  { icon: Facebook, href: '#' },
+                  { icon: Instagram, href: '#' },
+                  { icon: Twitter, href: '#' },
+                  { icon: Youtube, href: '#' }
+                ].map((social, idx) => (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-all duration-500 text-white"
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Services Column */}
-            <div className="lg:col-span-3">
-              <h4 className="text-2xl font-black mb-8 text-brand-dark">Services</h4>
+            <div className="lg:col-span-2 space-y-8">
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Services</h4>
               <ul className="space-y-4">
                 {[
                   'Exterior Painting',
@@ -35,9 +51,8 @@ export default function Footer() {
                   'Residential Painting',
                   'Furniture Painting'
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-red-600 shrink-0" />
-                    <span className="text-gray-700 font-bold">
+                  <li key={item}>
+                    <span className="text-white/60 hover:text-brand-gold transition-colors text-sm font-light cursor-default">
                       {item}
                     </span>
                   </li>
@@ -46,17 +61,16 @@ export default function Footer() {
             </div>
 
             {/* Navigation Column */}
-            <div className="lg:col-span-3">
-              <h4 className="text-2xl font-black mb-8 text-brand-dark">Navigation</h4>
+            <div className="lg:col-span-2 space-y-8">
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Navigation</h4>
               <ul className="space-y-4">
                 {[
                   { name: 'About Us', path: '/about' },
                   { name: 'Need a Painter?', path: '/need-a-painter' },
                   { name: 'Contact Us', path: '/contact' }
                 ].map((item) => (
-                  <li key={item.name} className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-red-600 shrink-0" />
-                    <Link to={item.path} className="text-gray-700 hover:text-brand-accent transition-colors font-bold">
+                  <li key={item.name}>
+                    <Link to={item.path} className="text-white/60 hover:text-brand-gold transition-colors text-sm font-light">
                       {item.name}
                     </Link>
                   </li>
@@ -65,24 +79,28 @@ export default function Footer() {
             </div>
 
             {/* Get in touch Column */}
-            <div className="lg:col-span-3">
-              <h4 className="text-2xl font-black mb-8 text-brand-dark">Get in touch</h4>
-              <div className="space-y-6">
-                <p className="text-gray-700 font-bold leading-relaxed text-sm">
+            <div className="lg:col-span-4 space-y-8">
+              <h4 className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-gold">Get in touch</h4>
+              <div className="space-y-8">
+                <p className="text-white/60 font-light leading-relaxed text-sm">
                   Scheme No. 02, Vijay Commercial Complex, <br />
                   Bhagat Singh Circle, Plot No. 43, near Jai <br />
                   Marg, Alwar, Rajasthan 301001
                 </p>
                 <div className="space-y-4">
-                  <a href="mailto:info@shubhamcolourhouse.com" className="flex items-center gap-3 group">
-                    <Mail className="w-5 h-5 text-red-600 shrink-0" />
-                    <span className="text-gray-700 group-hover:text-brand-accent transition-colors font-bold text-sm">
+                  <a href="mailto:info@shubhamcolourhouse.com" className="flex items-center gap-4 group">
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-500">
+                      <Mail className="w-3 h-3 text-brand-gold group-hover:text-white" />
+                    </div>
+                    <span className="text-white/60 group-hover:text-brand-gold transition-colors text-sm font-light">
                       info@shubhamcolourhouse.com
                     </span>
                   </a>
-                  <a href="tel:+622120022012" className="flex items-center gap-3 group">
-                    <Phone className="w-5 h-5 text-red-600 shrink-0" />
-                    <span className="text-gray-700 group-hover:text-brand-accent transition-colors font-bold text-sm">
+                  <a href="tel:+622120022012" className="flex items-center gap-4 group">
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-500">
+                      <Phone className="w-3 h-3 text-brand-gold group-hover:text-white" />
+                    </div>
+                    <span className="text-white/60 group-hover:text-brand-gold transition-colors text-sm font-light">
                       +6221.2002.2012
                     </span>
                   </a>
@@ -93,28 +111,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 px-8">
-          <p className="text-white text-sm font-bold">
-            Copyright © 2025, All rights reserved.
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/10 pt-12">
+          <p className="text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">
+            Copyright © 2025 Shubham Colour House. All rights reserved.
           </p>
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <span className="text-white text-sm font-bold uppercase tracking-widest opacity-80">Follow Us</span>
-            <div className="flex gap-4">
-              {[
-                { icon: Facebook, href: '#' },
-                { icon: Instagram, href: '#' },
-                { icon: Twitter, href: '#' },
-                { icon: Youtube, href: '#' }
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-brand-accent transition-all text-white"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
+          <div className="flex items-center gap-8">
+            <Link to="/privacy" className="text-white/30 hover:text-brand-gold text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-white/30 hover:text-brand-gold text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

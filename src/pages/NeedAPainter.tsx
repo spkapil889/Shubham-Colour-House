@@ -11,57 +11,55 @@ const steps = [
 
 export default function NeedAPainter() {
   return (
-    <div>
+    <div className="bg-brand-paper min-h-screen">
       {/* Hero */}
-      <section className="bg-brand-dark text-white py-32 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://peachpuff-lapwing-559400.hostingersite.com/wp-content/uploads/2026/03/beautiful-open-concept-interior-living-room-of-hou-2024-09-11-23-57-38-utc-1-scaled-1.webp"
-            alt="Painter Hero"
-            className="w-full h-full object-cover opacity-70"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/20 to-brand-dark/60" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+      <section className="pt-48 pb-32 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10 text-center max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/20 mb-8"
+          >
+            <Paintbrush className="w-4 h-4 text-brand-gold" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold">Professional Services</span>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-8xl font-bold mb-6 tracking-tight"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl md:text-8xl font-serif mb-8 tracking-tight text-brand-dark"
           >
-            Need a Trusted Painter in Alwar?
+            Trusted <span className="italic text-brand-gold">Artisans</span> in Alwar
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg md:text-xl text-brand-muted max-w-3xl mx-auto font-light leading-relaxed"
           >
-            Don't leave your home transformation to chance. We connect you with verified, experienced painters who understand premium products.
+            Don't leave your home transformation to chance. We connect you with verified, experienced painters who understand the nuances of premium finishes.
           </motion.p>
         </div>
       </section>
 
       {/* Process Steps */}
-      <section className="py-24 bg-white">
+      <section className="py-40 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-gray-600">Our simple 4-step process to get your home painted professionally.</p>
+          <div className="text-center mb-24">
+            <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold mb-4">Our Methodology</h2>
+            <p className="text-3xl md:text-5xl font-serif text-brand-dark">How It Works</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {steps.map((step, idx) => (
               <div key={idx} className="relative group">
-                {idx < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gray-100 -translate-y-1/2 z-0" />
-                )}
-                <div className="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 transition-all text-center">
-                  <div className={`w-16 h-16 ${step.color} text-white rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                    <step.icon className="w-8 h-8" />
+                <div className="relative z-10 bg-brand-paper p-10 rounded-[2.5rem] border border-brand-dark/5 transition-all text-center hover:shadow-xl hover:-translate-y-2 duration-500">
+                  <div className={`w-16 h-16 bg-brand-dark text-brand-gold rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg`}>
+                    <step.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="text-xl font-serif mb-4 text-brand-dark">{step.title}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed font-light">{step.desc}</p>
+                  <div className="mt-8 text-[10px] font-bold text-brand-gold/40 tracking-widest uppercase">Step 0{idx + 1}</div>
                 </div>
               </div>
             ))}
@@ -70,60 +68,63 @@ export default function NeedAPainter() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-40 bg-brand-paper">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-brand-dark leading-tight">
-                Why Use Our Painter <br />
-                <span className="text-brand-blue">Connection Service?</span>
-              </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div className="space-y-12">
               <div className="space-y-6">
+                <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold">Why Choose Us</h2>
+                <p className="text-4xl md:text-6xl font-serif text-brand-dark leading-tight">
+                  The <span className="italic">Excellence</span> in <br />
+                  Connection Service
+                </p>
+              </div>
+              <div className="space-y-10">
                 {[
                   { title: 'Verified Professionals', desc: 'We only recommend painters with a proven track record of quality work.' },
                   { title: 'Better Coordination', desc: 'We act as a bridge between you and the painter for clear communication.' },
                   { title: 'Right Product Usage', desc: 'Our painters are trained to use premium products correctly for best results.' },
                   { title: 'Saves Time & Effort', desc: 'Skip the hassle of searching and negotiating with unknown contractors.' }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-brand-blue" />
+                  <div key={idx} className="flex gap-6">
+                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm border border-brand-dark/5 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-xl">{item.title}</h4>
-                      <p className="text-gray-500">{item.desc}</p>
+                      <h4 className="font-serif text-2xl text-brand-dark mb-2">{item.title}</h4>
+                      <p className="text-brand-muted text-sm leading-relaxed font-light">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-white p-10 rounded-[3rem] border border-gray-100">
-              <h3 className="text-2xl font-bold mb-8">Request a Painter</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-500">Full Name</label>
-                    <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue" />
+            <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-brand-dark/5">
+              <h3 className="text-3xl font-serif text-brand-dark mb-10">Request a Painter</h3>
+              <form className="space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-muted">Full Name</label>
+                    <input type="text" className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium" />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-500">Phone Number</label>
-                    <input type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue" />
+                  <div className="space-y-3">
+                    <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-muted">Phone Number</label>
+                    <input type="tel" className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium" />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-500">Area / Locality in Alwar</label>
-                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue" />
+                <div className="space-y-3">
+                  <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-muted">Area / Locality in Alwar</label>
+                  <input type="text" className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark font-medium" />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-500">Type of Work</label>
-                  <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue">
+                <div className="space-y-3">
+                  <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-muted">Type of Work</label>
+                  <select className="w-full bg-brand-paper border-b border-brand-dark/10 px-0 py-4 focus:outline-none focus:border-brand-gold transition-colors appearance-none text-brand-dark font-medium">
                     <option>Interior Painting</option>
                     <option>Exterior Painting</option>
                     <option>Waterproofing</option>
                     <option>Wood/Metal Polishing</option>
                   </select>
                 </div>
-                <button className="btn-premium bg-brand-blue text-white w-full !px-10 !py-5">
+                <button className="btn-premium-gold w-full mt-4">
                   Submit Request
                 </button>
               </form>
@@ -133,23 +134,26 @@ export default function NeedAPainter() {
       </section>
 
       {/* Quick Contact */}
-      <section className="py-24 bg-white">
+      <section className="py-40 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-3xl font-bold">Need Immediate Assistance?</h2>
-            <div className="flex flex-wrap justify-center gap-6">
+          <div className="max-w-3xl mx-auto space-y-12">
+            <div className="space-y-4">
+              <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold">Immediate Assistance</h2>
+              <p className="text-4xl md:text-6xl font-serif text-brand-dark">Need Help <span className="italic">Now?</span></p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-8">
               <a
                 href="tel:+919829012345"
-                className="btn-premium bg-gray-100 text-brand-dark !px-10 !py-5 flex items-center gap-3"
+                className="btn-premium bg-brand-dark text-white flex items-center gap-3"
               >
-                <Phone className="w-6 h-6" />
+                <Phone className="w-4 h-4" />
                 Call Us Now
               </a>
               <a
                 href="https://wa.me/919829012345"
-                className="btn-premium bg-green-500 text-white !px-10 !py-5 flex items-center gap-3"
+                className="btn-premium bg-[#25D366] text-white flex items-center gap-3"
               >
-                <MessageSquare className="w-6 h-6" />
+                <MessageSquare className="w-4 h-4" />
                 WhatsApp Us
               </a>
             </div>

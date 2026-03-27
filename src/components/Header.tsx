@@ -43,16 +43,16 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'text-[15px] font-bold transition-colors hover:text-red-600',
-                link.name === 'Home' && location.pathname === '/'
-                  ? 'text-red-600'
-                  : 'text-gray-800'
+                'text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-100',
+                location.pathname === link.path
+                  ? 'text-brand-dark opacity-100'
+                  : 'text-brand-dark opacity-50'
               )}
             >
               {link.name}
@@ -63,9 +63,9 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="btn-premium bg-gradient-to-r from-[#D91E27] to-[#9E1B5E] text-white !px-8 !py-4 text-sm md:!px-10 md:!py-5 md:text-lg"
+            className="btn-premium"
           >
-            Contact Us
+            Contact
           </Link>
 
           {/* Mobile Menu Toggle */}
