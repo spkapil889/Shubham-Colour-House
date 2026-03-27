@@ -44,71 +44,39 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-brand-paper bg-mesh min-h-screen">
       {/* Section 1: Hero Banner */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="container mx-auto px-4 relative z-20 pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-10">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple mb-6 block">
-                  Est. 1995 • Alwar's Premier Paint House
-                </span>
-                <h1 className="text-[12vw] lg:text-[7vw] font-sans font-black leading-[0.85] tracking-tighter text-brand-dark mb-8">
-                  Refined <br />
-                  <span className="text-gradient">Aesthetics</span> <br />
-                  For Your Walls
-                </h1>
-                <p className="text-brand-muted text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
-                  Shubham Colour House brings three decades of expertise in premium coatings and architectural finishes to Alwar.
-                </p>
-                <div className="flex flex-wrap gap-6">
-                  <Link to="/products" className="btn-premium-gradient">
-                    Explore Collection
-                  </Link>
-                  <Link to="/calculator" className="btn-outline">
-                    Paint Calculator
-                  </Link>
-                </div>
-              </motion.div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#FE3A83] via-[#F931B6] to-[#F97316]">
+        <div className="absolute inset-0 bg-mesh opacity-20" />
+        <div className="container mx-auto px-4 relative z-20 text-center pt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto space-y-10"
+          >
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-white mb-6 block opacity-90">
+              Premium Painting Services
+            </span>
+            <h1 className="text-[10vw] lg:text-[6vw] font-sans font-black leading-[0.9] tracking-tighter text-white mb-8">
+              Transform Your Space <br />
+              with Elegance
+            </h1>
+            <p className="text-white/90 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+              Alwar's premier destination for premium paints and home transformation solutions since 1995.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link to="/contact" className="btn-premium bg-white !text-brand-purple hover:bg-white/90 shadow-2xl">
+                Get Started
+              </Link>
+              <Link to="/products" className="btn-outline !text-white !border-white/30 hover:!bg-white/10">
+                Our Products
+              </Link>
             </div>
-            <div className="lg:col-span-5 relative">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
-              >
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={currentSlide}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    src={heroSlides[currentSlide]}
-                    alt="Hero"
-                    className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                </AnimatePresence>
-                <div className="absolute inset-0 bg-brand-dark/10" />
-              </motion.div>
-              {/* Floating Element */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl hidden xl:block max-w-[240px] border border-black/5"
-              >
-                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-gold mb-2">Featured Finish</p>
-                <p className="text-sm font-serif italic text-brand-dark">"The perfect balance between luxury and durability for modern homes."</p>
-              </motion.div>
-            </div>
-          </div>
+          </motion.div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-black/10 rounded-full blur-3xl" />
       </section>
 
       {/* Section 2: Who We Are */}
