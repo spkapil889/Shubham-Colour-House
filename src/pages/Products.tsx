@@ -90,7 +90,7 @@ export default function Products() {
             className="space-y-8"
           >
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Selection</span>
-            <h1 className="text-6xl md:text-9xl font-black text-brand-dark tracking-tight leading-[0.9]">
+            <h1 className="text-4xl md:text-7xl font-black text-brand-dark tracking-tight leading-[1.1]">
               Premium <br />
               <span className="text-gradient">Curations</span>
             </h1>
@@ -135,7 +135,7 @@ export default function Products() {
                 <div className={`space-y-10 ${idx % 2 !== 0 ? 'lg:order-1' : ''}`}>
                   <div className="space-y-6">
                     <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Category {idx + 1}</span>
-                    <h2 className="text-5xl md:text-6xl font-black text-brand-dark leading-[1.1]">{cat.title}</h2>
+                    <h2 className="text-3xl md:text-4xl font-black text-brand-dark leading-[1.2]">{cat.title}</h2>
                     <p className="text-brand-muted text-lg leading-relaxed font-light">{cat.description}</p>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -173,7 +173,7 @@ export default function Products() {
                 <Info className="w-6 h-6 text-brand-purple" />
               </div>
               <div className="space-y-6">
-                <h2 className="text-5xl md:text-7xl font-black text-white leading-[1.1]">Confused About <br /><span className="text-gradient">Your Choice?</span></h2>
+                <h2 className="text-3xl md:text-5xl font-black text-white leading-[1.2]">Confused About <br /><span className="text-gradient">Your Choice?</span></h2>
                 <p className="text-white/60 text-lg leading-relaxed font-light max-w-xl">
                   Choosing the right paint depends on many factors like surface condition, exposure to sunlight, and desired finish. Our experts can help you select the perfect product for your specific needs.
                 </p>

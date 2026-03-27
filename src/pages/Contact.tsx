@@ -15,7 +15,7 @@ export default function Contact() {
             className="space-y-8"
           >
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Get in Touch</span>
-            <h1 className="text-6xl md:text-9xl font-black text-brand-dark tracking-tight leading-[0.9]">
+            <h1 className="text-4xl md:text-7xl font-black text-brand-dark tracking-tight leading-[1.1]">
               Let's <br />
               <span className="text-gradient">Connect</span>
             </h1>
@@ -33,7 +33,7 @@ export default function Contact() {
             <div className="lg:col-span-1 space-y-16">
               <div className="space-y-8">
                 <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Contact Details</span>
-                <h2 className="text-4xl font-black text-brand-dark leading-tight">Reach Our <br />Showroom</h2>
+                <h2 className="text-3xl font-black text-brand-dark leading-tight">Reach Our <br />Showroom</h2>
                 <p className="text-brand-muted font-light leading-relaxed">
                   Visit our showroom in Alwar or contact us through any of the following channels. We're here to help!
                 </p>

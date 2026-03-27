@@ -78,7 +78,7 @@ export default function Brands() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight text-brand-dark leading-[1.1]"
           >
             Our Trusted <span className="text-gradient">Partners</span>
           </motion.h1>
@@ -145,7 +145,7 @@ export default function Brands() {
               <div className="space-y-12">
                 <div className="space-y-6">
                   <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Quality Assurance</h2>
-                  <p className="text-4xl md:text-6xl font-black leading-tight">
+                  <p className="text-3xl md:text-5xl font-black leading-tight text-white">
                     Why Choose <br />
                     <span className="text-gradient">Branded</span> Paints?
                   </p>

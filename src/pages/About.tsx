@@ -22,7 +22,7 @@ export default function About() {
             className="space-y-8"
           >
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Legacy</span>
-            <h1 className="text-6xl md:text-9xl font-black text-brand-dark tracking-tight leading-[0.9]">
+            <h1 className="text-4xl md:text-7xl font-black text-brand-dark tracking-tight leading-[1.1]">
               The Art of <br />
               <span className="text-gradient">Excellence</span>
             </h1>
@@ -40,7 +40,7 @@ export default function About() {
             <div className="space-y-12">
               <div className="space-y-8">
                 <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Since 1994</span>
-                <h2 className="text-5xl md:text-7xl font-black text-brand-dark leading-[1.1]">
+                <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-[1.2]">
                   Three Decades of <br />
                   <span className="text-gradient">Transformation</span>
                 </h2>
@@ -91,7 +91,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-24 space-y-6">
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Philosophy</span>
-            <h2 className="text-5xl md:text-7xl font-black text-brand-dark leading-[1.1]">The Core of <br /><span className="text-gradient">Our Craft</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-[1.2]">The Core of <br /><span className="text-gradient">Our Philosophy</span></h2>
             <p className="text-brand-muted text-lg font-light">The principles that guide us in every interaction and project.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-6">
               <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Regional Presence</span>
-              <h2 className="text-5xl md:text-7xl font-black text-brand-dark leading-[1.1]">Serving Alwar <br /><span className="text-gradient">& Beyond</span></h2>
+              <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-[1.2]">Serving Alwar <br /><span className="text-gradient">& Beyond</span></h2>
               <p className="text-brand-muted text-lg font-light leading-relaxed max-w-2xl mx-auto">
                 We are proud to be Alwar's local paint experts. Our services extend to all surrounding areas, ensuring that premium quality and expert guidance are accessible to every homeowner in the region.
               </p>

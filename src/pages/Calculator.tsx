@@ -159,7 +159,7 @@ export default function Calculator() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight text-brand-dark leading-[1.1]"
           >
             Paint <span className="text-gradient">Calculator</span>
           </motion.h1>
@@ -605,7 +605,7 @@ ${calculations.primer > 0 ? `- Primer: ${calculations.primer} Liters` : ''}`;
           <div className="absolute top-0 right-0 w-full h-full bg-mesh opacity-10" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-6xl font-black leading-tight">Still Unsure About <br /><span className="text-gradient">The Quantity?</span></h2>
+              <h2 className="text-3xl md:text-5xl font-black leading-tight text-white">Still Unsure About <br /><span className="text-gradient">The Quantity?</span></h2>
               <p className="text-white/60 text-lg font-light leading-relaxed">
                 Our experts can visit your site for a professional measurement and provide a detailed, no-obligation quote.
               </p>

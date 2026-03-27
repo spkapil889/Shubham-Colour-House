@@ -81,7 +81,7 @@ export default function Blogs() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight text-brand-dark leading-[1.1]"
           >
             Paint & <span className="text-gradient">Colour</span> Blog
           </motion.h1>
@@ -139,7 +139,7 @@ export default function Blogs() {
               </div>
               <div className="lg:w-2/5 p-12 md:p-20 flex flex-col justify-center space-y-8">
                 <span className="text-brand-purple font-bold tracking-[0.3em] uppercase text-[10px]">{blogPosts[0].category}</span>
-                <h2 className="text-4xl md:text-5xl font-black text-brand-dark group-hover:text-brand-purple transition-colors leading-tight">
+                <h2 className="text-2xl md:text-4xl font-black text-brand-dark group-hover:text-brand-purple transition-colors leading-tight">
                   {blogPosts[0].title}
                 </h2>
                 <p className="text-brand-muted text-lg leading-relaxed font-light">
@@ -220,7 +220,7 @@ export default function Blogs() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/5 blur-3xl rounded-full -mr-32 -mt-32" />
             <div className="space-y-6 relative z-10">
               <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Stay Inspired</h2>
-              <p className="text-4xl md:text-6xl font-black">Get Paint Tips in <br /><span className="text-gradient">Your Inbox</span></p>
+              <p className="text-3xl md:text-5xl font-black text-white leading-tight">Get Paint Tips in <br /><span className="text-gradient">Your Inbox</span></p>
             </div>
             <p className="text-white/40 max-w-2xl mx-auto relative z-10 font-light leading-relaxed">
               Subscribe to our journal for the latest colour trends, expert DIY tips, and exclusive offers from Shubham Colour House.

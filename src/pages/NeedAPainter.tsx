@@ -60,7 +60,7 @@ export default function NeedAPainter() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-brand-dark"
+            className="text-4xl md:text-7xl font-black mb-8 tracking-tight text-brand-dark leading-[1.1]"
           >
             Trusted <span className="text-gradient">Artisans</span> in Alwar
           </motion.h1>
@@ -76,11 +76,12 @@ export default function NeedAPainter() {
       </section>
 
       {/* Process Steps */}
-      <section className="py-40 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-40 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-mesh opacity-[0.03] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-24 space-y-8">
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-purple">Our Methodology</span>
-            <h2 className="text-5xl md:text-8xl font-black text-brand-dark leading-[0.9]">
+            <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-[1.2]">
               How It <br />
               <span className="text-gradient">Works</span>
             </h2>
@@ -97,7 +98,7 @@ export default function NeedAPainter() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative p-10 rounded-[2.5rem] bg-brand-paper border border-brand-dark/5 hover:shadow-2xl transition-all duration-500"
+                className="group relative p-10 rounded-[2.5rem] bg-brand-paper border border-brand-dark/5 hover:shadow-2xl hover:border-brand-purple/20 transition-all duration-500"
               >
                 <div className="absolute -top-6 -left-6 w-16 h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-500 border border-brand-dark/5">
                   <item.icon className="w-6 h-6" />
@@ -106,7 +107,7 @@ export default function NeedAPainter() {
                   <div className="flex justify-between items-center">
                     <span className="text-4xl font-black text-black/5 group-hover:text-brand-purple/10 transition-colors duration-500">{item.step}</span>
                   </div>
-                  <h4 className="text-2xl font-bold text-brand-dark">{item.title}</h4>
+                  <h4 className="text-2xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors duration-500">{item.title}</h4>
                   <p className="text-brand-muted leading-relaxed font-light text-sm">{item.desc}</p>
                 </div>
               </motion.div>
@@ -122,7 +123,7 @@ export default function NeedAPainter() {
             <div className="space-y-12">
               <div className="space-y-6">
                 <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Why Choose Us</h2>
-                <p className="text-4xl md:text-6xl font-black text-brand-dark leading-tight">
+                <p className="text-3xl md:text-5xl font-black text-brand-dark leading-tight">
                   The <span className="text-gradient">Excellence</span> in <br />
                   Connection Service
                 </p>
@@ -187,7 +188,7 @@ export default function NeedAPainter() {
           <div className="max-w-3xl mx-auto space-y-12">
             <div className="space-y-4">
               <h2 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-purple">Immediate Assistance</h2>
-              <p className="text-4xl md:text-6xl font-black text-brand-dark">Need Help <span className="text-gradient">Now?</span></p>
+              <p className="text-3xl md:text-5xl font-black text-brand-dark leading-tight">Need Help <span className="text-gradient">Now?</span></p>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
               <a
